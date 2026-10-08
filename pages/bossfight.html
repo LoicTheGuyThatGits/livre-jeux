@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Duel of Wills - The Dragon's Shadow</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="game-header">
+      <button id="langToggle" onclick="toggleLanguage()" style="position:absolute;top:20px;right:20px;padding:8px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);cursor:pointer;font-family:'Cinzel',serif;font-size:0.8rem;">FR</button>
+      <h1 class="game-title" data-i18n="gameTitle">The Dragon's Shadow</h1>
+      <p class="game-subtitle" data-i18n="bossfightSubtitle">Chapter VIII - The Duel of Wills</p>
+    </header>
+
+    <div class="step-indicator" data-i18n="bossfightStep">Step 8 of 8</div>
+
+    <div class="scene-image">
+      <img src="../images/superlord.png" alt="The Superlord Malachar raises his hand and light weaves itself into a grid of ten columns">
+    </div>
+
+    <div class="story-text">
+      <p data-i18n="bossfightStory1">Purple light hangs in the air between you and the throne — a lattice of <span class="magic">light</span>, ten columns wide and twenty rows high. Ancient runes circle its border, and pieces of <span class="danger">cursed stone</span> drift through it, dropping into place with a sound like cracking bone.</p>
+      <p data-i18n="bossfightStory2">"Your battlefield," Malachar murmurs, settling back into his throne. "<span class="highlight">Twenty lines</span> before me, and you live. Fill your own grid, <span class="highlight">hero</span>. I am very old, and I have all the time in the world."</p>
+      <p data-i18n="bossfightStory3">This is no duel of swords. Malachar strikes at your grid itself: every few moments a wave of <span class="danger">dark stone</span> crashes down into your rows and clogs them. But the game rewards the bold — clear <span class="highlight">four lines at once</span> and you send the darkness straight back into his grid.</p>
+      <p data-i18n="bossfightStory4">Behind him the dragon watches, the <span class="magic">Amulet of Domination</span> pulsing against its chains. Beside the throne your spouse is still trapped. Win, and both are yours. Lose, and the shadows keep everything.</p>
+      <p data-i18n="bossfightStory5">Two grids. One amulet. <span class="highlight">Play.</span></p>
+    </div>
+
+    <!-- ============ THE ARENA ============ -->
+    <div class="boss-arena" id="arena">
+
+      <section class="arena-side boss-side" id="bossSide">
+        <div class="fighter-banner">
+          <span class="fighter-name" data-i18n="bossName">Superlord Malachar</span>
+          <span class="fighter-count">
+            <span class="fighter-label" data-i18n="hudLines">Lines</span>
+            <span id="bossLinesValue">0 / 20</span>
+          </span>
+          <div class="fighter-track">
+            <div class="fighter-fill boss-fill" id="bossFill"></div>
+          </div>
+        </div>
+
+        <canvas id="bossCanvas" width="170" height="340"></canvas>
+
+        <p class="arena-taunt" id="arenaTaunt"></p>
+      </section>
+
+      <div class="arena-vs">&#9876;</div>
+
+      <section class="arena-side player-side" id="playerSide">
+        <div class="fighter-banner">
+          <span class="fighter-name">
+            <span data-i18n="youName">You</span> &middot; <span class="player-name">Hero</span>
+          </span>
+          <span class="fighter-count">
+            <span class="fighter-label" data-i18n="hudLines">Lines</span>
+            <span id="playerLinesValue">0 / 20</span>
+          </span>
+          <div class="fighter-track">
+            <div class="fighter-fill player-fill" id="playerFill"></div>
+          </div>
+        </div>
+
+        <div class="board-row">
+          <canvas id="playerCanvas" width="220" height="440"></canvas>
+
+          <aside class="board-hud">
+            <div class="hud-box">
+              <span class="hud-label" data-i18n="hudNext">Next</span>
+              <canvas id="nextCanvas" width="44" height="44"></canvas>
+            </div>
+            <div class="hud-box">
+              <span class="hud-label" data-i18n="hudHold">Hold</span>
+              <canvas id="holdCanvas" width="44" height="44"></canvas>
+            </div>
+            <div class="hud-box">
+              <span class="hud-label" data-i18n="hudScore">Score</span>
+              <span class="hud-value" id="scoreValue">0</span>
+            </div>
+          </aside>
+        </div>
+
+        <p class="arena-danger" data-i18n="dangerWarning">Your rows are filling — clear them before they choke you!</p>
+      </section>
+
+      <div class="garbage-alert" id="garbageAlert"></div>
+    </div>
+
+    <!-- ============ CONTROLS ============ -->
+    <div class="boss-controls">
+      <p class="choice-label" data-i18n="controlsTitle">Controls</p>
+      <div class="control-grid">
+        <div class="control-item"><span class="control-keys">&larr; &rarr;</span><span data-i18n="controlMove">Move left / right</span></div>
+        <div class="control-item"><span class="control-keys">&darr;</span><span data-i18n="controlSoft">Soft drop</span></div>
+        <div class="control-item"><span class="control-keys">SPACE</span><span data-i18n="controlHard">Hard drop</span></div>
+        <div class="control-item"><span class="control-keys">&uarr; / X</span><span data-i18n="controlRotate">Rotate</span></div>
+        <div class="control-item"><span class="control-keys">Z</span><span data-i18n="controlRotateBack">Rotate the other way</span></div>
+        <div class="control-item"><span class="control-keys">C</span><span data-i18n="controlHold">Hold a piece</span></div>
+        <div class="control-item"><span class="control-keys">P</span><span data-i18n="controlPause">Pause the duel</span></div>
+        <div class="control-item"><span class="control-keys">R</span><span data-i18n="controlRestart">Restart the duel</span></div>
+      </div>
+
+      <p class="choice-label" data-i18n="touchTitle">Touch controls</p>
+      <div class="touch-controls">
+        <button class="touch-btn" data-act="left" aria-label="Left">&#9664;</button>
+        <button class="touch-btn" data-act="rotate" aria-label="Rotate">&#8635;</button>
+        <button class="touch-btn" data-act="right" aria-label="Right">&#9654;</button>
+        <button class="touch-btn" data-act="soft" aria-label="Soft drop">&#9660;</button>
+        <button class="touch-btn touch-btn-wide" data-act="drop" aria-label="Hard drop">&#8615;</button>
+        <button class="touch-btn touch-btn-wide" data-act="hold" aria-label="Hold">&#10697;</button>
+      </div>
+
+      <div class="control-actions">
+        <button class="mini-btn" id="btnPause" data-i18n="btnPause">Pause</button>
+        <button class="mini-btn" id="btnRestart" data-i18n="btnRestart">Restart</button>
+      </div>
+    </div>
+
+    <!-- ============ OVERLAYS ============ -->
+    <div class="duel-overlay" id="duelOverlay">
+      <div class="overlay-card">
+        <h2 class="overlay-title" id="overlayTitle"></h2>
+        <p class="overlay-text" id="overlayText"></p>
+        <div class="overlay-actions" id="overlayActions"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/game.js"></script>
+  <script src="../js/translations.js"></script>
+  <script src="../js/tetris.js"></script>
+  <script>
+    // Keep the duel interface in the chosen language
+    const baseApplyLanguage = applyLanguage;
+    applyLanguage = function () {
+      baseApplyLanguage();
+      // BossFight is a top-level const, so it is not a property of window
+      if (typeof BossFight !== 'undefined') BossFight.refreshLanguage();
+    };
+
+    document.addEventListener('DOMContentLoaded', function () {
+      BossFight.init();
+    });
+  </script>
+</body>
+</html>

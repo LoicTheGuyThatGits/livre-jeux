@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Your Hero - The Dragon's Shadow</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="game-header">
+      <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()" style="position:absolute;top:20px;right:20px;padding:8px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);cursor:pointer;font-family:'Cinzel',serif;font-size:0.8rem;">FR</button>
+      <h1 class="game-title" data-i18n="createTitle">Create Your Hero</h1>
+      <p class="game-subtitle" data-i18n="gameSubtitle">500AC - The Age of Shadows</p>
+    </header>
+
+    <div class="scene-image">
+      <img src="../images/hero-male.png" alt="Hero silhouette" id="heroPreview">
+    </div>
+
+    <div class="character-create">
+      <label for="playerName" data-i18n="nameLabel">What is your name, hero?</label>
+      <input type="text" id="playerName" placeholder="Enter your name..." maxlength="20" data-i18n-placeholder="namePlaceholder">
+
+      <label style="margin-top: 20px;" data-i18n="genderLabel">Choose your path</label>
+      <div class="gender-select">
+        <button class="gender-btn" id="btnMale" onclick="selectGender('male')" data-i18n="maleHero">
+          &#9876; Male Hero
+        </button>
+        <button class="gender-btn" id="btnFemale" onclick="selectGender('female')" data-i18n="femaleHero">
+          &#9876; Female Hero
+        </button>
+      </div>
+
+      <button class="start-btn" onclick="startGame()" data-i18n="startButton">Begin the Quest</button>
+    </div>
+  </div>
+
+  <script src="../js/game.js"></script>
+  <script src="../js/translations.js"></script>
+  <script>
+    let selectedGender = '';
+
+    function selectGender(gender) {
+      selectedGender = gender;
+      document.getElementById('btnMale').classList.toggle('selected', gender === 'male');
+      document.getElementById('btnFemale').classList.toggle('selected', gender === 'female');
+      document.getElementById('heroPreview').src = gender === 'male'
+        ? '../images/hero-male.png'
+        : '../images/hero-female.png';
+    }
+
+    function startGame() {
+      const name = document.getElementById('playerName').value.trim();
+      if (!name) {
+        alert(currentLang === 'fr' ? 'Veuillez entrer votre nom, héros.' : 'Please enter your name, hero.');
+        return;
+      }
+      if (!selectedGender) {
+        alert(currentLang === 'fr' ? 'Veuillez choisir votre voie.' : 'Please choose your path.');
+        return;
+      }
+      GameState.reset();
+      GameState.playerName = name;
+      GameState.playerGender = selectedGender;
+      GameState.save();
+      goToPage('attack.html');
+    }
+  </script>
+</body>
+</html>

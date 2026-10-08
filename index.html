@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Dragon's Shadow - 500AC</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="game-header">
+      <button id="langToggle" class="lang-toggle" onclick="toggleLanguage()" style="position:absolute;top:20px;right:20px;padding:8px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);cursor:pointer;font-family:'Cinzel',serif;font-size:0.8rem;">FR</button>
+      <h1 class="game-title" data-i18n="gameTitle">The Dragon's Shadow</h1>
+      <p class="game-subtitle" data-i18n="gameSubtitle">A Tale of 500AC</p>
+    </header>
+
+    <div class="scene-image">
+      <img src="images/burning-village1.png" alt="A village burns under a dragon's shadow">
+    </div>
+
+    <div class="story-text">
+      <p data-i18n="indexStory1">The year is <span class="highlight">500AC</span> — the Age of Shadows. For three hundred years, the <span class="magic">Superlord Malachar</span> has ruled the land with an iron fist, his power drawn from the ancient dragons he has enslaved.</p>
+      <p data-i18n="indexStory2">Tonight, his darkness has come to <span class="highlight">your</span> home.</p>
+      <p data-i18n="indexStory3">Flames consume the village. Screams echo through the night. And from the sky, a dragon — eyes glowing with malevolent purple fire — descends upon you all. In its claws, struggling and crying out, is the one person you hold most dear: <span class="highlight">your spouse</span>.</p>
+      <p data-i18n="indexStory4">The dragon vanishes into the night, carrying everything you love toward the Superlord's fortress in the <span class="danger">Shadowpeak Mountains</span>.</p>
+      <p data-i18n="indexStory5">Your journey begins now.</p>
+    </div>
+
+    <div class="choices-container">
+      <p class="choice-label">Your Journey Awaits</p>
+      <button class="choice-btn" onclick="goToPage('pages/start.html')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="indexButton">Begin Your Quest</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="js/game.js"></script>
+  <script src="js/translations.js"></script>
+</body>
+</html>

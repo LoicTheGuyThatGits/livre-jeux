@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Victory - The Dragon's Shadow</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="game-header">
+      <button id="langToggle" onclick="toggleLanguage()" style="position:absolute;top:20px;right:20px;padding:8px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);cursor:pointer;font-family:'Cinzel',serif;font-size:0.8rem;">FR</button>
+      <h1 class="game-title" data-i18n="gameTitle">The Dragon's Shadow</h1>
+      <p class="game-subtitle" data-i18n="victorySubtitle">Epilogue - Dawn of a New Age</p>
+    </header>
+
+    <div class="scene-image">
+      <img src="../images/victory.png" alt="The hero and their spouse are reunited as the dragon flies free">
+    </div>
+
+    <div class="victory-container">
+      <h1 class="victory-title" data-i18n="victoryTitle">&#9876; Victory &#9876;</h1>
+
+      <div class="victory-text">
+        <p data-i18n="victoryText1">The <span class="magic">Amulet of Domination</span> shatters into a thousand pieces, its fragments dissolving into harmless motes of light. The chains binding the dragon fall away, clattering to the stone floor like the death knell of an era.</p>
+        <p data-i18n="victoryText2">For a long, breathless moment, nothing happens. Then the dragon — <span class="highlight">free</span> for the first time in centuries — raises its mighty head and lets out a roar that shakes the very foundations of the fortress. But this is not a roar of <span class="danger">rage</span>. It is a roar of <span class="highlight">liberation</span>.</p>
+        <p data-i18n="victoryText3">The dragon turns its gaze upon you, and where once there was only the purple fire of enslavement, now there is something else: <span class="highlight">gratitude</span>. It bends its great neck, and you understand — it is offering you its trust.</p>
+        <p data-i18n="victoryText4">Behind you, the cage of dark energy holding your spouse dissolves. They stumble forward, and you catch them in your arms. Tears stream down both your faces as you hold each other, neither daring to believe that it is truly over.</p>
+        <p data-i18n="victoryText5">The Superlord's fortress begins to crumble, its dark magic fading with the destruction of the amulet. The undead soldiers collapse like marionettes with cut strings. The storm clouds above the Shadowpeak Mountains part for the first time in three hundred years, revealing the <span class="highlight">dawn</span>.</p>
+        <p data-i18n="victoryText6">As the sun rises over a land finally free from tyranny, you stand with your spouse beside you and the dragon at your side. The Age of Shadows is over. A new age — an age of <span class="highlight">hope</span> — has begun.</p>
+        <p data-i18n="victoryText7" style="margin-top: 20px; font-size: 1.3rem; color: #d4a017;">Thank you for playing, <span class="player-name">Hero</span>.</p>
+        <p class="duel-record" id="duelRecord"></p>
+      </div>
+
+      <button class="start-btn" onclick="GameState.reset(); goToPage('../index.html')" data-i18n="playAgain">Play Again</button>
+    </div>
+  </div>
+
+  <script src="../js/game.js"></script>
+  <script src="../js/translations.js"></script>
+  <script>
+    // Show how the hero won the duel of wills
+    function updateDuelRecord() {
+      const record = document.getElementById('duelRecord');
+      if (!record || !GameState.flags.tetrisWon) return;
+      const lines = GameState.flags.tetrisLines || 0;
+      const score = Math.round(GameState.flags.tetrisScore || 0);
+      record.innerHTML = t('duelRecord', { lines: lines, score: score });
+    }
+
+    // Keep the record in the chosen language
+    const baseApplyLanguage = applyLanguage;
+    applyLanguage = function () {
+      baseApplyLanguage();
+      updateDuelRecord();
+    };
+
+    document.addEventListener('DOMContentLoaded', function () {
+      updateDuelRecord();
+    });
+  </script>
+</body>
+</html>

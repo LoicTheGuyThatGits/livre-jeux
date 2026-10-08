@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Over - The Dragon's Shadow</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="game-header">
+      <button id="langToggle" onclick="toggleLanguage()" style="position:absolute;top:20px;right:20px;padding:8px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);cursor:pointer;font-family:'Cinzel',serif;font-size:0.8rem;">FR</button>
+      <h1 class="game-title" data-i18n="gameTitle">The Dragon's Shadow</h1>
+      <p class="game-subtitle" data-i18n="gameoverSubtitle">Your Journey Has Ended</p>
+    </header>
+
+    <div class="scene-image">
+      <img src="../images/gameover.png" alt="Darkness and despair">
+    </div>
+
+    <div class="gameover-container">
+      <h1 class="gameover-title" data-i18n="gameoverTitle">Game Over</h1>
+
+      <div class="gameover-reason" id="gameoverReason">
+        <!-- Reason filled by JavaScript -->
+      </div>
+
+      <button class="retry-btn" onclick="GameState.reset(); goToPage('../index.html')" data-i18n="tryAgain">Try Again</button>
+    </div>
+  </div>
+
+  <script src="../js/game.js"></script>
+  <script src="../js/translations.js"></script>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const reason = params.get('reason') || 'unknown';
+    const reasonEl = document.getElementById('gameoverReason');
+
+    function updateGameoverReason() {
+      if (reasonEl) {
+        const reasonKey = 'reason' + reason.charAt(0).toUpperCase() + reason.slice(1);
+        const texts = Translations[currentLang];
+        if (texts[reasonKey]) {
+          reasonEl.innerHTML = '<p>' + texts[reasonKey] + '</p>';
+        } else if (texts.reasonUnknown) {
+          reasonEl.innerHTML = '<p>' + texts.reasonUnknown + '</p>';
+        }
+      }
+    }
+
+    // Override applyLanguage to also update gameover reason
+    const originalApplyLanguage = applyLanguage;
+    applyLanguage = function() {
+      originalApplyLanguage();
+      updateGameoverReason();
+    };
+
+    // Initial load
+    document.addEventListener('DOMContentLoaded', function() {
+      updateGameoverReason();
+    });
+  </script>
+</body>
+</html>
