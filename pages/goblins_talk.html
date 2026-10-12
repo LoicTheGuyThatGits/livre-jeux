@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Words with Monsters - The Dragon's Shadow</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="game-header">
+      <button id="langToggle" onclick="toggleLanguage()" style="position:absolute;top:20px;right:20px;padding:8px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);cursor:pointer;font-family:'Cinzel',serif;font-size:0.8rem;">FR</button>
+      <h1 class="game-title" data-i18n="gameTitle">The Dragon's Shadow</h1>
+      <p class="game-subtitle" data-i18n="goblinTalkSubtitle">Chapter III - The Forked Tongue</p>
+    </header>
+
+    <div class="step-indicator" data-i18n="goblinTalkStep">Step 3.5 of 8</div>
+
+    <div class="scene-image">
+      <img src="../images/goblins.png" alt="Hero confronting goblin chieftain">
+    </div>
+
+    <div class="story-text">
+      <p data-i18n="goblinTalkStory1">You step into the firelight, hands raised, weapon sheathed. The goblins fall silent, then erupt in cruel laughter. Their <span class="highlight">chieftain</span> — larger, scarred, wearing a crown of bent iron — lumbers forward.</p>
+      <p data-i18n="goblinTalkStory2">"Talk?" it grunts in the common tongue, thick and mocking. "Pretty human wants to <span class="highlight">talk</span>. Why?"</p>
+      <p data-i18n="goblinTalkStory3">You speak of your spouse. Of the dragon. Of the Superlord's tyranny. You offer gold, service, anything for safe passage.</p>
+      <p data-i18n="goblinTalkStory4">The chieftain's smile reveals filed teeth. "Superlord <span class="magic">owns</span> us. Superlord <span class="magic">feeds</span> us. Superlord gives <span class="magic">power</span>." He gestures to the purple-eye banner. "You offer... nothing."</p>
+      <p data-i18n="goblinTalkStory5">The spears rise as one. The chieftain laughs as they drive home.</p>
+    </div>
+
+    <div class="choices-container">
+      <p class="choice-label" data-i18n="choiceFinalAct">Your final act?</p>
+      <button class="choice-btn" onclick="makeChoice('goblinTalk_curse', 'goblins_talk')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="goblinTalkChoice1">Curse the Superlord with your dying breath</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('goblinTalk_pray', 'goblins_talk')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="goblinTalkChoice2">Pray for your spouse's safety</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('goblinTalk_spite', 'goblins_talk')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="goblinTalkChoice3">Trigger your hidden explosive — take the chieftain with you</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="../js/game.js"></script>
+  <script src="../js/translations.js"></script>
+</body>
+</html>

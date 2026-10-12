@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <parameter=content>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Battle at the Pass - The Dragon's Shadow</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="game-header">
+      <button id="langToggle" onclick="toggleLanguage()" style="position:absolute;top:20px;right:20px;padding:8px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);cursor:pointer;font-family:'Cinzel',serif;font-size:0.8rem;">FR</button>
+      <h1 class="game-title" data-i18n="gameTitle">The Dragon's Shadow</h1>
+      <p class="game-subtitle" data-i18n="mountainPassFightSubtitle">Chapter II - The Amphitheater of Blood</p>
+    </header>
+
+    <div class="step-indicator" data-i18n="mountainPassFightStep">Step 3 of 8</div>
+
+    <div class="scene-image">
+      <img src="../images/goblins.png" alt="Hero fighting goblins in mountain pass amphitheater">
+    </div>
+
+    <div class="story-text">
+      <p data-i18n="mountainPassFightStory1">You charge the goblin camp from above, gravity and fury on your side. The first rank dies before they turn. The shaman's purple lightning misses — you're already inside its guard.</p>
+      <p data-i18n="mountainPassFightStory2">But twenty goblins. Twenty. You kill seven before a spear catches your side. Eight before a club shatters your shield. Nine. Ten. The poison in their blades burns hot in your veins.</p>
+      <p data-i18n="mountainPassFightStory3">The chieftain falls last — your sword through its eye. The survivors scatter, shrieking into the mist.</p>
+      <p data-i18n="mountainPassFightStory4">You stand amidst the carnage, bleeding from a dozen wounds. The poison spreads. But the pass is clear. The village — and the mountain beyond — await.</p>
+      <p data-i18n="mountainPassFightStory5">In the chieftain's tent: a <span class="highlight">map</span> showing a <span class="magic">hidden trail</span> up the mountain's east face. And a <span class="magic">vial of antidote</span> — goblin-made, foul, but effective.</p>
+    </div>
+
+    <div class="choices-container">
+      <p class="choice-label" data-i18n="choiceWhatNow">What do you do?</p>
+      <button class="choice-btn" onclick="makeChoice('mountainPassFight_antidote', 'mountainPass_fight')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="mountainPassFightChoice1">Drink the antidote, take the map, push on immediately</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('mountainPassFight_camp', 'mountainPass_fight')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="mountainPassFightChoice2">Camp in the cleared pass — recover before the climb</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('mountainPassFight_scavenge', 'mountainPass_fight')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="mountainPassFightChoice3">Scavenge goblin gear — their poisoned blades could be useful</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="../js/game.js"></script>
+  <script src="../js/translations.js"></script>
+</body>
+</html>

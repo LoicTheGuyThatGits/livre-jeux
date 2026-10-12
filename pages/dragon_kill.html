@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mercy's Blade - The Dragon's Shadow</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="game-header">
+      <button id="langToggle" onclick="toggleLanguage()" style="position:absolute;top:20px;right:20px;padding:8px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);cursor:pointer;font-family:'Cinzel',serif;font-size:0.8rem;">FR</button>
+      <h1 class="game-title" data-i18n="gameTitle">The Dragon's Shadow</h1>
+      <p class="game-subtitle" data-i18n="dragonKillSubtitle">Chapter VII - The Dragon's Fall</p>
+    </header>
+
+    <div class="step-indicator" data-i18n="dragonKillStep">Step 7.5 of 8</div>
+
+    <div class="scene-image">
+      <img src="../images/superlord.png" alt="Hero driving sword into dragon's heart">
+    </div>
+
+    <div class="story-text">
+      <p data-i18n="dragonKillStory1">You drive your sword into the dragon's heart. The great beast shudders, a sound like breaking mountains escaping its throat. The purple fire in its eyes <span class="highlight">vanishes</span> — replaced by gold, warm and grateful.</p>
+      <p data-i18n="dragonKillStory2">"Thank you," it whispers, a voice like wind through ancient pines. "Three hundred years... I am <span class="highlight">free</span>."</p>
+      <p data-i18n="dragonKillStory3">The dragon collapses. The amulet around Malachar's neck <span class="danger">screams</span> — cracks spiderwebbing across its surface.</p>
+      <p data-i18n="dragonKillStory4">But the cage holding your spouse — it was <span class="magic">bound to the dragon's life</span>. As the beast dies, the cage dissolves. Your spouse falls free — and does not rise.</p>
+      <p data-i18n="dragonKillStory5">You catch them. No breath. No heartbeat. The dragon's freedom cost their life. Malachar screams as the amulet shatters. You kneel in the throne room, holding your dead love, victorious and <span class="danger">utterly destroyed</span>.</p>
+    </div>
+
+    <div class="choices-container">
+      <p class="choice-label" data-i18n="choiceWhatNow">What now?</p>
+      <button class="choice-btn" onclick="makeChoice('dragonKill_mourn', 'dragonChoice_kill')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="dragonKillChoice1">Stay with them forever — the fortress crumbles around you</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('dragonKill_carry', 'dragonChoice_kill')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="dragonKillChoice2">Carry them home — walk back through the mountains to bury them properly</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('dragonKill_revenge', 'dragonChoice_kill')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="dragonKillChoice3">Find Malachar's dying body and ensure he suffers</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="../js/game.js"></script>
+  <script src="../js/translations.js"></script>
+</body>
+</html>

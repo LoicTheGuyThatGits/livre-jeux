@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Village Elder - The Dragon's Shadow</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="game-header">
+      <button id="langToggle" onclick="toggleLanguage()" style="position:absolute;top:20px;right:20px;padding:8px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);cursor:pointer;font-family:'Cinzel',serif;font-size:0.8rem;">FR</button>
+      <h1 class="game-title" data-i18n="gameTitle">The Dragon's Shadow</h1>
+      <p class="game-subtitle" data-i18n="helpSubtitle">Chapter I - The Elder's Price</p>
+    </header>
+
+    <div class="step-indicator" data-i18n="helpStep">Step 1.5 of 8</div>
+
+    <div class="scene-image">
+      <img src="../images/village.png" alt="Village elder's hut in the burning village">
+    </div>
+
+    <div class="story-text">
+      <p data-i18n="helpStory1">You fight through the panicked crowds toward the <span class="highlight">Elder's hut</span> at the village center. The old woman — <span class="highlight">Mara</span> — waits at her doorway, staff in hand, unmoved by the chaos.</p>
+      <p data-i18n="helpStory2">"You seek the dragon's path," she says, not a question. "I know the old ways. I can read the signs the Superlord left behind. But knowledge has a <span class="danger">price</span>."</p>
+      <p data-i18n="helpStory3">She demands three things: a <span class="highlight">lock of your spouse's hair</span> (impossible, they're in the dragon's claws), a <span class="highlight">vial of dragon's blood</span> (you'd need to wound the beast first), and a <span class="highlight">promise to return</span> with the Amulet of Domination.</p>
+      <p data=i18n="helpStory4">Days pass as you argue, beg, and finally attempt impossible tasks. The trail grows cold. The Elder shakes her head.</p>
+      <p data-i18n="helpStory5">"Too late," she murmurs. "The shadows have already claimed what you love."</p>
+    </div>
+
+    <div class="choices-container">
+      <p class="choice-label" data-i18n="choiceWhatNow">What now?</p>
+      <button class="choice-btn" onclick="makeChoice('help_accept', 'attack_help')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="helpChoice1">Accept the elder's final gift — a map to a secret mountain pass</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('help_reject', 'attack_help')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="helpChoice2">Reject her defeatism and strike out on your own</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="../js/game.js"></script>
+  <script src="../js/translations.js"></script>
+</body>
+</html>

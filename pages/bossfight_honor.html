@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Honorable Duel - The Dragon's Shadow</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="game-header">
+      <button id="langToggle" onclick="toggleLanguage()" style="position:absolute;top:20px;right:20px;padding:8px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);cursor:pointer;font-family:'Cinzel',serif;font-size:0.8rem;">FR</button>
+      <h1 class="game-title" data-i18n="gameTitle">The Dragon's Shadow</h1>
+      <p class="game-subtitle" data-i18n="bossfightHonorSubtitle">Chapter VIII - The Duel of Equals</p>
+    </header>
+
+    <div class="step-indicator" data-i18n="bossfightHonorStep">Step 8 of 8</div>
+
+    <div class="scene-image">
+      <img src="../images/superlord.png" alt="Superlord Malachar and hero in honorable duel">
+    </div>
+
+    <div class="story-text">
+      <p data-i18n="bossfightHonorStory1">The lattice manifests — but this time, <span class="highlight">both grids start empty</span>. No handicap. No head start. Pure skill.</p>
+      <p data-i18n="bossfightHonorStory2">Malachar bows slightly. "<span class="highlight">A fair fight</span>. I have not had one in centuries. Thank you, hero."</p>
+      <p data-i18n="bossfightHonorStory3">The pieces fall. He plays with surgical precision — T-spins, perfect clears, combos that sing. But you match him, move for move. The audience of one dragon watches in silence.</p>
+      <p data-i18n="bossfightHonorStory4">At eighteen lines each, he pauses. Looks at you. "<span class="magic">You fight beautifully</span>. Your spouse is proud. Your village would be proud. Even I... am proud."</p>
+      <p data-i18n="bossfightHonorStory5">The final exchange. Two grids. One winner. The amulet waits.</p>
+    </div>
+
+    <div class="choices-container">
+      <p class="choice-label" data-i18n="choiceHowEnd">How does this end?</p>
+      <button class="choice-btn" onclick="makeChoice('bossfightHonor_win', 'bossfight?mode=honor')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="bossfightHonorChoice1">Win cleanly — twenty lines, perfect game, shatter the amulet</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('bossfightHonor_lose', 'bossfight?mode=honor')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="bossfightHonorChoice2">Lose gracefully — he wins, but earns your respect</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('bossfightHonor_draw', 'bossfight?mode=honor')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="bossfightHonorChoice3">Force a draw — both grids fill simultaneously, the amulet cracks but holds</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="../js/game.js"></script>
+  <script src="../js/translations.js"></script>
+</body>
+</html>

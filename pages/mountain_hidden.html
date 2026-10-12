@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Hidden Trail - The Dragon's Shadow</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="game-header">
+      <button id="langToggle" onclick="toggleLanguage()" style="position:absolute;top:20px;right:20px;padding:8px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);cursor:pointer;font-family:'Cinzel',serif;font-size:0.8rem;">FR</button>
+      <h1 class="game-title" data-i18n="gameTitle">The Dragon's Shadow</h1>
+      <p class="game-subtitle" data-i18n="mountainHiddenSubtitle">Chapter V - The Whispering Ledge</p>
+    </header>
+
+    <div class="step-indicator" data-i18n="mountainHiddenStep">Step 5.5 of 8</div>
+
+    <div class="scene-image">
+      <img src="../images/mountain.png" alt="Hero traversing narrow hidden trail on cliff face">
+    </div>
+
+    <div class="story-text">
+      <p data-i18n="mountainHiddenStory1">The hidden trail is barely a <span class="highlight">goat path</span> — a narrow ledge winding along the cliff face, concealed by overhanging rock and perpetual mist. One misstep means death.</p>
+      <p data-i18n="mountainHiddenStory2">You move slowly, deliberately. Three points of contact always. The wind howls, tearing at your cloak. Far below, the clouds hide the valley floor. Above, the fortress looms closer with each agonizing meter.</p>
+      <p data-i18n="mountainHiddenStory3">Halfway across, you find a <span class="magic">crystal embedded in the rock</span> — pulsing purple, warm. A <span class="highlight">warding stone</span> from the old times. You pry it free. The air grows... lighter.</p>
+      <p data-i18n="mountainHiddenStory4">The trail ends at a <span class="highlight">forgotten postern gate</span> — a small service door in the fortress's eastern wall, half-swallowed by stone. The lock is rusted but functional.</p>
+      <p data-i18n="mountainHiddenStory5">You slip inside, unseen, unheard. The fortress's guts await.</p>
+    </div>
+
+    <div class="choices-container">
+      <p class="choice-label" data-i18n="choiceWhereNow">Where do you go inside the fortress?</p>
+      <button class="choice-btn" onclick="makeChoice('mountainHidden_dungeons', 'mountain_hidden')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="mountainHiddenChoice1">Descend to the dungeons — prisoners might know the layout</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('mountainHidden_armory', 'mountain_hidden')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="mountainHiddenChoice2">Find the armory — better weapons for the fight ahead</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('mountainHidden_throne', 'mountain_hidden')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="mountainHiddenChoice3">Head straight for the throne room — no more delays</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="../js/game.js"></script>
+  <script src="../js/translations.js"></script>
+</body>
+</html>

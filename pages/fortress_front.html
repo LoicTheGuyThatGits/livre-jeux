@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Storming the Gate - The Dragon's Shadow</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="game-header">
+      <button id="langToggle" onclick="toggleLanguage()" style="position:absolute;top:20px;right:20px;padding:8px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);cursor:pointer;font-family:'Cinzel',serif;font-size:0.8rem;">FR</button>
+      <h1 class="game-title" data-i18n="gameTitle">The Dragon's Shadow</h1>
+      <p class="game-subtitle" data-i18n="fortressFrontSubtitle">Chapter VI - The Iron Maw</p>
+    </header>
+
+    <div class="step-indicator" data-i18n="fortressFrontStep">Step 6.5 of 8</div>
+
+    <div class="scene-image">
+      <img src="../images/fortress.png" alt="Hero fighting undead guards at fortress main gate">
+    </div>
+
+    <div class="story-text">
+      <p data-i18n="fortressFrontStory1">You charge the <span class="danger">main gate</span>, sword raised, a scream tearing from your throat. The undead guards don't flinch. They form a shield wall — <span class="magic">ancient steel</span>, unbreakable discipline.</p>
+      <p data-i18n="fortressFrontStory2">Your blade strikes a shield. The impact jars your arms to the shoulder. Another guard's spear takes you in the thigh. You kill him, but three more fill the gap.</p>
+      <p data-i18n="fortressFrontStory3">You fight like a demon. Five fall. Ten. Twenty. But they are <span class="highlight">legion</span>. A mace crushes your ribs. A sword opens your back. You fall to your knees, surrounded by the patient dead.</p>
+      <p data-i18n="fortressFrontStory4">The gate looms behind them, unbreached. Your vision dims. The last thing you see is a <span class="magic">purple glow</span> from the throne room windows.</p>
+    </div>
+
+    <div class="choices-container">
+      <p class="choice-label" data-i18n="choiceFinalAct">Your final act?</p>
+      <button class="choice-btn" onclick="makeChoice('fortressFront_curse', 'fortress_front')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="fortressFrontChoice1">Curse the Superlord with your dying breath</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('fortressFront_spouse', 'fortress_front')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="fortressFrontChoice2">Whisper your spouse's name one last time</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('fortressFront_grenade', 'fortress_front')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="fortressFrontChoice3">Trigger your last alchemical fire — take the front rank with you</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="../js/game.js"></script>
+  <script src="../js/translations.js"></script>
+</body>
+</html>

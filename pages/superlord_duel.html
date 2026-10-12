@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Honor's Demand - The Dragon's Shadow</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="game-header">
+      <button id="langToggle" onclick="toggleLanguage()" style="position:absolute;top:20px;right:20px;padding:8px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);cursor:pointer;font-family:'Cinzel',serif;font-size:0.8rem;">FR</button>
+      <h1 class="game-title" data-i18n="gameTitle">The Dragon's Shadow</h1>
+      <p class="game-subtitle" data-i18n="superlordDuelSubtitle">Chapter VII - The Formal Challenge</p>
+    </header>
+
+    <div class="step-indicator" data-i18n="superlordDuelStep">Step 7.5 of 8</div>
+
+    <div class="scene-image">
+      <img src="../images/superlord.png" alt="Hero challenging Superlord to formal duel">
+    </div>
+
+    <div class="story-text">
+      <p data-i18n="superlordDuelStory1">"I challenge you to a <span class="highlight">formal duel of wills</span>," you declare. "Honor against honor. No cheating. No head start."</p>
+      <p data-i18n="superlordDuelStory2">Malachar's eyebrows rise. A long silence. Then laughter — rich, warm, <span class="highlight">genuine</span>. "Honor. From a hero. How... <span class="magic">refreshing</span>."</p>
+      <p data-i18n="superlordDuelStory3">He waves a hand. The lattice forms. But his grid remains <span class="highlight">empty</span>. "Very well. No head start. We begin as equals. May the better will win."</p>
+      <p data-i18n="superlordDuelStory4">The first pieces drop simultaneously. You realize with a jolt — he's <span class="danger">good</span>. Three hundred years of practice. But he's playing fair.</p>
+      <p data-i18n="superlordDuelStory5">The honorable duel begins. Pure skill against ancient mastery.</p>
+    </div>
+
+    <div class="choices-container">
+      <p class="choice-label" data-i18n="choiceHowPlay">How do you play the honorable duel?</p>
+      <button class="choice-btn" onclick="makeChoice('superlordDuel_perfect', 'superlord_duel')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="superlordDuelChoice1">Play perfectly — no risks, no mistakes, pure technique</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('superlordDuel_mind', 'superlord_duel')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="superlordDuelChoice2">Play the player — read his patterns, bait his errors</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('superlordDuel_heart', 'superlord_duel')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="superlordDuelChoice3">Play with heart — let your love for your spouse guide every move</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="../js/game.js"></script>
+  <script src="../js/translations.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sneaking Past the Camp - The Dragon's Shadow</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="game-header">
+      <button id="langToggle" onclick="toggleLanguage()" style="position:absolute;top:20px;right:20px;padding:8px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);cursor:pointer;font-family:'Cinzel',serif;font-size:0.8rem;">FR</button>
+      <h1 class="game-title" data-i18n="gameTitle">The Dragon's Shadow</h1>
+      <p class="game-subtitle" data-i18n="mountainPassSneakSubtitle">Chapter II - The Shale Slide</p>
+    </header>
+
+    <div class="step-indicator" data-i18n="mountainPassSneakStep">Step 3 of 8</div>
+
+    <div class="scene-image">
+      <img src="../images/mountain.png" alt="Hero sneaking past goblin camp on loose shale trail">
+    </div>
+
+    <div class="story-text">
+      <p data-i18n="mountainPassSneakStory1">The hidden trail is treacherous — loose shale on a sheer cliff face, twenty feet above the goblin camp. One kicked stone means discovery. Death.</p>
+      <p data-i18n="mountainPassSneakStory2">You move like a shadow. <span class="highlight">Three points of contact</span>. Test each hold. The goblins feast below, unaware. Their fire crackles. They argue over a haunch of stolen mutton.</p>
+      <p data-i18n="mountainPassSneakStory3">A section gives way. You drop — catch a root — swing — land silent on a ledge. Heart hammering. Below, a goblin looks up, scratches its head, goes back to eating.</p>
+      <p data-i18n="mountainPassSneakStory4">You clear the camp. The trail continues upward, merging with the main path above the amphitheater. You're past the blockade. Unseen. Unhurt.</p>
+      <p data=i18n="mountainPassSneakStory5">The mountain opens before you. The fortress looms closer. But you notice something the goblins missed — a <span class="magic">faint glow</span> in a crevice halfway up. A <span class="highlight">warding stone</span>?</p>
+    </div>
+
+    <div class="choices-container">
+      <p class="choice-label" data-i18n="choiceWhatNow">What do you do?</p>
+      <button class="choice-btn" onclick="makeChoice('mountainPassSneak_stone', 'mountainPass_sneak')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="mountainPassSneakChoice1">Detour for the warding stone — magic protection is priceless</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('mountainPassSneak_continue', 'mountainPass_sneak')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="mountainPassSneakChoice2">Continue upward — the stone is a distraction</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('mountainPassSneak_mark', 'mountainPass_sneak')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="mountainPassSneakChoice3">Mark the location — return for it on the way down</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="../js/game.js"></script>
+  <script src="../js/translations.js"></script>
+</body>
+</html>

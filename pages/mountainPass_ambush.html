@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Rockslide Trap - The Dragon's Shadow</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="game-header">
+      <button id="langToggle" onclick="toggleLanguage()" style="position:absolute;top:20px;right:20px;padding:8px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);cursor:pointer;font-family:'Cinzel',serif;font-size:0.8rem;">FR</button>
+      <h1 class="game-title" data-i18n="gameTitle">The Dragon's Shadow</h1>
+      <p class="game-subtitle" data-i18n="mountainPassAmbushSubtitle">Chapter II - The Mountain's Wrath</p>
+    </header>
+
+    <div class="step-indicator" data-i18n="mountainPassAmbushStep">Step 3 of 8</div>
+
+    <div class="scene-image">
+      <img src="../images/mountain.png" alt="Rockslide burying goblin camp in mountain pass">
+    </div>
+
+    <div class="story-text">
+      <p data-i18n="mountainPassAmbushStory1">You spot the <span class="highlight">unstable overhang</span> above the goblin camp — a massive slab of fractured granite, held by prayer and friction. Your rope and pitons can bring it down.</p>
+      <p data-i18n="mountainPassAmbushStory2">You work fast, quiet. Anchor the rope. Wedge the pitons. Saw the last supporting roots. The goblins below never look up.</p>
+      <p data-i18n="mountainPassAmbushStory3">You pull. The mountain <span class="danger">groans</span>. The slab shifts. Then falls — a thousand tons of stone, silent at first, then a thunder that shakes your teeth.</p>
+      <p data-i18n="mountainPassAmbushStory4">The camp vanishes. Buried. Crushed. Silent. The pass is clear — but the debris blocks the path entirely. You'll have to climb the rubble, or find another way.</p>
+      <p data-i18n="mountainPassAmbushStory5">In the silence after, you hear it: <span class="magic">dragon wings</span>. The beast circles above, drawn by the violence. It <span class="highlight">sees you</span>. The purple eyes lock onto yours.</p>
+    </div>
+
+    <div class="choices-container">
+      <p class="choice-label" data-i18n="choiceWhatNow">The dragon approaches. What do you do?</p>
+      <button class="choice-btn" onclick="makeChoice('mountainPassAmbush_hide', 'mountainPass_ambush')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="mountainPassAmbushChoice1">Hide in the rubble — let it pass, follow at a distance</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('mountainPassAmbush_signal', 'mountainPass_ambush')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="mountainPassAmbushChoice2">Signal the dragon — show you're not its enemy</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('mountainPassAmbush_attack', 'mountainPass_ambush')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="mountainPassAmbushChoice3">Attack the dragon — your only chance is to bring it down now</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="../js/game.js"></script>
+  <script src="../js/translations.js"></script>
+</body>
+</html>

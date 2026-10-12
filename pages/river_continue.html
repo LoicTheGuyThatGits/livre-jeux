@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>River Bank Journey - The Dragon's Shadow</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="game-header">
+      <button id="langToggle" onclick="toggleLanguage()" style="position:absolute;top:20px;right:20px;padding:8px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);cursor:pointer;font-family:'Cinzel',serif;font-size:0.8rem;">FR</button>
+      <h1 class="game-title" data-i18n="gameTitle">The Dragon's Shadow</h1>
+      <p class="game-subtitle" data-i18n="riverContinueSubtitle">Chapter II - The Long Walk</p>
+    </header>
+
+    <div class="step-indicator" data-i18n="riverContinueStep">Step 3 of 8</div>
+
+    <div class="scene-image">
+      <img src="../images/forest-path.png" alt="Hero walking along misty river bank">
+    </div>
+
+    <div class="story-text">
+      <p data-i18n="riverContinueStory1">You follow the river bank. The mist never lifts. The water runs black and cold. Strange shapes move beneath the surface — <span class="danger">things that should not be</span>.</p>
+      <p data-i18n="riverContinueStory2">Days pass. The river widens, slows. You find a <span class="highlight">fisher's hut</span> — abandoned, but stocked. Dried fish. A sound boat. A journal: <span class="magic">"The river feeds the fortress. The fortress feeds the river. Do not cross at the lake."</span></p>
+      <p data-i18n="riverContinueStory3">You take the boat. The hut's supplies. The journal's warning.</p>
+      <p data-i18n="riverContinueStory4">The lake looms ahead. The ruined tower on its island. The far shore leads to the mountain path. But the journal warns of <span class="magic">something in the water</span>.</p>
+    </div>
+
+    <div class="choices-container">
+      <p class="choice-label" data-i18n="choiceHowCross">How do you cross the lake?</p>
+      <button class="choice-btn" onclick="makeChoice('riverContinue_boat', 'river_continue')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="riverContinueChoice1">Row the boat — fast and quiet</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('riverContinue_shore', 'river_continue')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="riverContinueChoice2">Walk the shore — the long way, but solid ground</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('riverContinue_tower', 'river_continue')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="riverContinueChoice3">Visit the tower first — the journal mentioned a warning</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="../js/game.js"></script>
+  <script src="../js/translations.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shatter the Source - The Dragon's Shadow</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="game-header">
+      <button id="langToggle" onclick="toggleLanguage()" style="position:absolute;top:20px;right:20px;padding:8px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);cursor:pointer;font-family:'Cinzel',serif;font-size:0.8rem;">FR</button>
+      <h1 class="game-title" data-i18n="gameTitle">The Dragon's Shadow</h1>
+      <p class="game-subtitle" data-i18n="dragonAmuletSubtitle">Chapter VII - The Amulet's End</p>
+    </header>
+
+    <div class="step-indicator" data-i18n="dragonAmuletStep">Step 7.5 of 8</div>
+
+    <div class="scene-image">
+      <img src="../images/superlord.png" alt="Hero striking the Amulet of Domination">
+    </div>
+
+    <div class="story-text">
+      <p data-i18n="dragonAmuletStory1">You ignore the dragon. You ignore Malachar. You charge the <span class="magic">Amulet of Domination</span> itself.</p>
+      <p data-i18n="dragonAmuletStory2">Malachar moves — finally — but he's too slow. Your blessed blade (or your bare hands, if you have no other) strikes the purple gem.</p>
+      <p data-i18n="dragonAmuletStory3">The amulet <span class="danger">shrieks</span>. A sound like a thousand souls tearing free. Cracks race across its surface. Purple light explodes outward — a nova of liberation.</p>
+      <p data-i18n="dragonAmuletStory4">The dragon's chains shatter. Its eyes blaze <span class="highlight">gold</span>. It roars — a sound that shakes the fortress foundations. The cage holding your spouse dissolves. They fall into your arms, alive, breathing, <span class="highlight">yours</span>.</p>
+      <p data-i18n="dragonAmuletStory5">Malachar staggers, his power broken. The fortress begins to crumble. The storm clouds part. Dawn breaks over the Shadowpeaks for the first time in three centuries.</p>
+    </div>
+
+    <div class="choices-container">
+      <p class="choice-label" data-i18n="choiceWhatNow">What do you do?</p>
+      <button class="choice-btn" onclick="makeChoice('dragonAmulet_escape', 'dragonChoice_amulet')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="dragonAmuletChoice1">Flee the collapsing fortress with your spouse and the freed dragon</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('dragonAmulet_finish', 'dragonChoice_amulet')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="dragonAmuletChoice2">Find Malachar and end him while he's weak</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('dragonAmulet_ride', 'dragonChoice_amulet')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="dragonAmuletChoice3">Mount the dragon — ride the dawn wind home as legends are born</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="../js/game.js"></script>
+  <script src="../js/translations.js"></script>
+</body>
+</html>

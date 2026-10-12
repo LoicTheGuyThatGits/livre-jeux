@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Goblin Ambush - The Dragon's Shadow</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="game-header">
+      <button id="langToggle" onclick="toggleLanguage()" style="position:absolute;top:20px;right:20px;padding:8px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);cursor:pointer;font-family:'Cinzel',serif;font-size:0.8rem;">FR</button>
+      <h1 class="game-title" data-i18n="gameTitle">The Dragon's Shadow</h1>
+      <p class="game-subtitle" data-i18n="goblinsSubtitle">Chapter III - The Goblin's Camp</p>
+    </header>
+
+    <div class="step-indicator" data-i18n="goblinsStep">Step 3 of 8</div>
+
+    <div class="scene-image">
+      <img src="../images/goblins.png" alt="Goblins block the mountain path">
+    </div>
+
+    <div class="story-text">
+      <p data-i18n="goblinsStory1">The mountain pass narrows as you climb higher into the <span class="danger">Shadowpeak range</span>. The air grows thin and cold. Jagged rocks loom on either side, and the wind howls like a banshee through the gaps.</p>
+      <p data-i18n="goblinsStory2">Then you hear it — the unmistakable sound of <span class="danger">goblin voices</span>. Crude laughter and the crackle of a campfire echo from ahead. You creep closer and peer around a boulder.</p>
+      <p data-i18n="goblinsStory3">A camp. At least a dozen <span class="danger">goblins</span> — twisted, green-skinned creatures loyal to the Superlord — have made their camp right in the middle of the only pass through the mountains. They're feasting on stolen livestock, their crude weapons piled beside them. A crude banner bearing the Superlord's sigil — a <span class="magic">purple eye</span> — flutters above their camp.</p>
+      <p data-i18n="goblinsStory4">There's no way around them. The cliffs on either side are too steep to climb. You must deal with these <span class="danger">creatures</span> — one way or another.</p>
+    </div>
+
+    <div class="choices-container">
+      <p class="choice-label" data-i18n="choiceHowHandle">How do you handle the goblins?</p>
+      <button class="choice-btn" onclick="makeChoice('goblins_fight', 'goblins')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="goblinsChoice1">Charge in and fight them head-on with your sword</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('goblins_sneak', 'goblins')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="goblinsChoice2">Wait for the right moment and sneak past them in the shadows</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('goblins_talk', 'goblins')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="goblinsChoice3">Step into the open and try to reason with them</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="../js/game.js"></script>
+  <script src="../js/translations.js"></script>
+</body>
+</html>

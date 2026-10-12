@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <parameter=content>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Diversion - The Dragon's Shadow</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="game-header">
+      <button id="langToggle" onclick="toggleLanguage()" style="position:absolute;top:20px;right:20px;padding:8px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);cursor:pointer;font-family:'Cinzel',serif;font-size:0.8rem;">FR</button>
+      <h1 class="game-title" data-i18n="gameTitle">The Dragon's Shadow</h1>
+      <p class="game-subtitle" data-i18n="fortressDistractSubtitle">Chapter VI - The False Alarm</p>
+    </header>
+
+    <div class="step-indicator" data-i18n="fortressDistractStep">Step 6.5 of 8</div>
+
+    <div class="scene-image">
+      <img src="../images/fortress.png" alt="Explosion at fortress wall as distraction">
+    </div>
+
+    <div class="story-text">
+      <p data-i18n="fortressDistractStory1">You set the <span class="highlight">alchemical charges</span> at the fortress's western powder store — stolen from the goblins, stabilized with prayer and luck. The fuse burns slow.</p>
+      <p data-i18n="fortressDistractStory2">You retreat to the eastern wall. The explosion <span class="danger">thunders</span> — stone screams, the ground heaves. Guards pour toward the breach. The eastern postern is <span class="highlight">unguarded</span>.</p>
+      <p data-i18n="fortressDistractStory3">You slip inside, heart pounding. Corridors empty. Stairs climb. You ascend toward the throne room, the distraction holding.</p>
+      <p data-i18n="fortressDistractStory4">Then — a <span class="magic">silent alarm</span>. A pulse of purple light races through the stones. The Superlord <span class="highlight">knew</span>.</p>
+      <p data-i18n="fortressDistractStory5">Undead cut you off ahead. Behind, the returning guards. The distraction was a trap. You are caught in the pincer.</p>
+    </div>
+
+    <div class="choices-container">
+      <p class="choice-label" data-i18n="choiceWhatNow">What do you do?</p>
+      <button class="choice-btn" onclick="makeChoice('fortressDistract_fight', 'fortress_distraction')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="fortressDistractChoice1">Fight through the forward group — break for the throne room</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('fortressDistract_surrender', 'fortress_distraction')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="fortressDistractChoice2">Surrender — get taken to the Superlord directly</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('fortressDistract_down', 'fortress_distraction')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="fortressDistractChoice3">Flee downward — into the dungeons, the sewers, anywhere</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="../js/game.js"></script>
+  <script src="../js/translations.js"></script>
+</body>
+</html>

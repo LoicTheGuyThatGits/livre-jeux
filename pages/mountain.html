@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Mountain - The Dragon's Shadow</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="game-header">
+      <button id="langToggle" onclick="toggleLanguage()" style="position:absolute;top:20px;right:20px;padding:8px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);cursor:pointer;font-family:'Cinzel',serif;font-size:0.8rem;">FR</button>
+      <h1 class="game-title" data-i18n="gameTitle">The Dragon's Shadow</h1>
+      <p class="game-subtitle" data-i18n="mountainSubtitle">Chapter V - The Ascent</p>
+    </header>
+
+    <div class="step-indicator" data-i18n="mountainStep">Step 5 of 8</div>
+
+    <div class="scene-image">
+      <img src="../images/mountain.png" alt="A treacherous mountain path leading to a distant fortress">
+    </div>
+
+    <div class="story-text">
+      <p data-i18n="mountainStory1">The <span class="danger">Shadowpeak Mountains</span> rise before you like the jagged teeth of some ancient, slumbering giant. At their summit, barely visible through the perpetual storm clouds, stands the <span class="magic">Fortress of Malachar</span> — a monument to darkness carved into the living rock.</p>
+      <p data-i18n="mountainStory2">Your supplies are secured. Your resolve is iron. But the mountain itself is the Superlord's first line of defense — a <span class="danger">natural fortress</span> that has claimed the lives of countless would-be heroes.</p>
+      <p data-i18n="mountainStory3">Three routes present themselves. The <span class="highlight">main path</span> is wide and relatively clear — but it's almost certainly watched and trapped. A <span class="highlight">hidden trail</span> winds along the cliff face, barely visible through the mist. And a <span class="highlight">rope bridge</span> spans a deadly chasm, swaying ominously in the howling wind.</p>
+      <p data-i18n="mountainStory4">Each path is a gamble. Choose with your head, not just your heart.</p>
+    </div>
+
+    <div class="choices-container">
+      <p class="choice-label" data-i18n="choiceWhichRoute">Which route do you take?</p>
+      <button class="choice-btn" onclick="makeChoice('mountain_main', 'mountain')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="mountainChoice1">Take the main path — speed is more important than caution</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('mountain_hidden', 'mountain')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="mountainChoice2">Find and follow the hidden trail along the cliff face</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('mountain_bridge', 'mountain')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="mountainChoice3">Cross the rope bridge over the chasm</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="../js/game.js"></script>
+  <script src="../js/translations.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Words to a Beast - The Dragon's Shadow</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="game-header">
+      <button id="langToggle" onclick="toggleLanguage()" style="position:absolute;top:20px;right:20px;padding:8px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);cursor:pointer;font-family:'Cinzel',serif;font-size:0.8rem;">FR</button>
+      <h1 class="game-title" data-i18n="gameTitle">The Dragon's Shadow</h1>
+      <p class="game-subtitle" data-i18n="dragonTalkSubtitle">Chapter VII - The Forked Tongue</p>
+    </header>
+
+    <div class="step-indicator" data-i18n="dragonTalkStep">Step 7.5 of 8</div>
+
+    <div class="scene-image">
+      <img src="../images/superlord.png" alt="Hero speaking to the chained dragon">
+    </div>
+
+    <div class="story-text">
+      <p data-i18n="dragonTalkStory1">You speak to the dragon. Not at it — <span class="highlight">to</span> it. You tell it of the skies it once ruled. Of the mate it lost to the Superlord's treachery. Of the eggs smashed in the nest. You speak of <span class="magic">freedom</span>.</p>
+      <p data-i18n="dragonTalkStory2">The purple fire in its eyes <span class="danger">flares</span>. The amulet pulses violently. Malachar laughs. "Words? You think <span class="magic">words</span> break three hundred years of binding?"</p>
+      <p data-i18n="dragonTalkStory3">The dragon's maw opens. <span class="magic">Purple flame</span> erupts — not at you, but at the <span class="highlight">chains binding it</span>. The fire burns with the amulet's own power, turned inward.</p>
+      <p data-i18n="dragonTalkStory4">But the amulet's hold is too strong. The flames curve back, consuming the dragon — and you. The fire is <span class="danger">cold</span>, not hot. It burns the soul.</p>
+      <p data-i18n="dragonTalkStory5">You fall, consciousness fading. The last thing you hear is the dragon's roar — not of rage, but of <span class="highlight">sorrow</span>. Some chains cannot be broken with words alone.</p>
+    </div>
+
+    <div class="choices-container">
+      <p class="choice-label" data-i18n="choiceFinalAct">Your final moment?</p>
+      <button class="choice-btn" onclick="makeChoice('dragonTalk_accept', 'dragonChoice_talk')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="dragonTalkChoice1">Accept death — you tried, and that matters</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('dragonTalk_reach', 'dragonChoice_talk')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="dragonTalkChoice2">Reach for your spouse's cage one last time</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('dragonTalk_spite', 'dragonChoice_talk')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="dragonTalkChoice3">Use your last breath to curse Malachar's name</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="../js/game.js"></script>
+  <script src="../js/translations.js"></script>
+</body>
+</html>

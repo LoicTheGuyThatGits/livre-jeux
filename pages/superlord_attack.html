@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Direct Assault - The Dragon's Shadow</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="game-header">
+      <button id="langToggle" onclick="toggleLanguage()" style="position:absolute;top:20px;right:20px;padding:8px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);cursor:pointer;font-family:'Cinzel',serif;font-size:0.8rem;">FR</button>
+      <h1 class="game-title" data-i18n="gameTitle">The Dragon's Shadow</h1>
+      <p class="game-subtitle" data-i18n="superlordAttackSubtitle">Chapter VII - The Futile Strike</p>
+    </header>
+
+    <div class="step-indicator" data-i18n="superlordAttackStep">Step 7.5 of 8</div>
+
+    <div class="scene-image">
+      <img src="../images/superlord.png" alt="Hero lunging at Superlord Malachar">
+    </div>
+
+    <div class="story-text">
+      <p data-i18n="superlordAttackStory1">You lunge for the <span class="magic">Amulet of Domination</span> — a desperate strike at the source of all evil. Your blade sings through air thick with dark power.</p>
+      <p data-i18n="superlordAttackStory2">Malachar doesn't move. Doesn't blink. He simply <span class="highlight">raises one pale hand</span>.</p>
+      <p data-i18n="superlordAttackStory3">A wave of <span class="magic">purple force</span> catches you mid-air. You fly backward, slamming into the throne room's stone pillars. Ribs shatter. Vision swims. Your sword clatters from nerveless fingers.</p>
+      <p data-i18n="superlordAttackStory4">"Predictable," he murmurs, rising gracefully. He steps to you, looming. The amulet pulses. "Every hero thinks the direct blow will work. Every hero dies the same way."</p>
+      <p data-i18n="superlordAttackStory5">He places a foot on your chest. The dragon watches. Your spouse screams. Darkness takes you.</p>
+    </div>
+
+    <div class="choices-container">
+      <p class="choice-label" data-i18n="choiceFinalAct">Your final thought?</p>
+      <button class="choice-btn" onclick="makeChoice('superlordAttack_regret', 'superlord_attack')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="superlordAttackChoice1">Regret — you should have accepted the duel</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('superlordAttack_love', 'superlord_attack')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="superlordAttackChoice2">Love — your spouse's face is the last thing you see</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('superlordAttack_defiance', 'superlord_attack')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="superlordAttackChoice3">Defiance — you die spitting in his face</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="../js/game.js"></script>
+  <script src="../js/translations.js"></script>
+</body>
+</html>

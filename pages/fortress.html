@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Fortress - The Dragon's Shadow</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="game-header">
+      <button id="langToggle" onclick="toggleLanguage()" style="position:absolute;top:20px;right:20px;padding:8px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);cursor:pointer;font-family:'Cinzel',serif;font-size:0.8rem;">FR</button>
+      <h1 class="game-title" data-i18n="gameTitle">The Dragon's Shadow</h1>
+      <p class="game-subtitle" data-i18n="fortressSubtitle">Chapter VI - The Fortress of Malachar</p>
+    </header>
+
+    <div class="step-indicator" data-i18n="fortressStep">Step 6 of 8</div>
+
+    <div class="scene-image">
+      <img src="../images/fortress.png" alt="The dark fortress of the Superlord looms against the night sky">
+    </div>
+
+    <div class="story-text">
+      <p data-i18n="fortressStory1">You have reached the <span class="danger">Fortress of Malachar</span>. It is everything the stories warned you would be — a monstrous structure of black stone and iron, its towers piercing the storm clouds like spears aimed at the heavens. <span class="magic">Dark magic</span> crackles in the air, and the very ground seems to writhe beneath your feet.</p>
+      <p data-i18n="fortressStory2">Guards patrol the walls — <span class="danger">undead soldiers</span>, their eyes empty, their movements mechanical. They feel no pain, no fear, no mercy. The Superlord's will drives them like puppets on invisible strings.</p>
+      <p data-i18n="fortressStory3">You spot three possible ways inside. The <span class="highlight">main gate</span> is heavily guarded but straightforward. A <span class="highlight">hidden passage</span> — perhaps a drainage tunnel or forgotten postern — is partially concealed by rubble on the fortress's eastern side. And you could create a <span class="highlight">distraction</span> to draw the guards away from another entry point.</p>
+      <p data-i18n="fortressStory4">Inside these walls, your spouse is waiting. And so is the <span class="magic">Superlord</span>.</p>
+    </div>
+
+    <div class="choices-container">
+      <p class="choice-label" data-i18n="choiceHowEnter">How do you enter the fortress?</p>
+      <button class="choice-btn" onclick="makeChoice('fortress_front', 'fortress')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="fortressChoice1">Storm the main gate — fight your way through the guards</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('fortress_secret', 'fortress')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="fortressChoice2">Find and use the hidden passage on the eastern side</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('fortress_distraction', 'fortress')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="fortressChoice3">Create a distraction to draw the guards away, then slip in</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="../js/game.js"></script>
+  <script src="../js/translations.js"></script>
+</body>
+</html>

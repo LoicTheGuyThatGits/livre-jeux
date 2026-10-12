@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The River Path - The Dragon's Shadow</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="game-header">
+      <button id="langToggle" onclick="toggleLanguage()" style="position:absolute;top:20px;right:20px;padding:8px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);cursor:pointer;font-family:'Cinzel',serif;font-size:0.8rem;">FR</button>
+      <h1 class="game-title" data-i18n="gameTitle">The Dragon's Shadow</h1>
+      <p class="game-subtitle" data-i18n="riverSubtitle">Chapter II - The Whispering Water</p>
+    </header>
+
+    <div class="step-indicator" data-i18n="riverStep">Step 2.5 of 8</div>
+
+    <div class="scene-image">
+      <img src="../images/forest-path.png" alt="Misty river path through dark forest">
+    </div>
+
+    <div class="story-text">
+      <p data-i18n="riverStory1">The river path follows a <span class="highlight">swift mountain stream</span>, its waters dark and cold. Mist clings to the surface, masking your scent — and your vision. The current is deceptively strong, fed by glacial melt from the Shadowpeaks.</p>
+      <p data-i18n="riverStory2">You walk the rocky bank for hours. The dragon's trail crosses and re-crosses the water, suggesting it flew low here, perhaps drinking. You find a <span class="magic">single scale</span> caught on a riverside bush — obsidian, warm to the touch, pulsing faintly.</p>
+      <p data-i18n="riverStory3">Night falls. The mist thickens. Strange lights dance on the water — <span class="magic">will-o'-wisps</span> or something worse. The river widens into a <span class="danger">black lake</span>. In its center, a small island holds a <span class="highlight">ruined tower</span>.</p>
+      <p data-i18n="riverStory4">A boat rots at the water's edge. The far shore continues toward the mountains. The tower might hold shelter — or answers.</p>
+    </div>
+
+    <div class="choices-container">
+      <p class="choice-label" data-i18n="choiceWhichWay">Which way do you go?</p>
+      <button class="choice-btn" onclick="makeChoice('river_continue', 'forest_river')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="riverChoice1">Follow the river bank onward toward the mountains</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('river_boat', 'forest_river')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="riverChoice2">Repair the boat and cross the lake to the tower</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('river_swim', 'forest_river')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="riverChoice3">Swim across the lake — the water hides your trail</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="../js/game.js"></script>
+  <script src="../js/translations.js"></script>
+</body>
+</html>

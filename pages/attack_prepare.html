@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preparing for the Hunt - The Dragon's Shadow</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="game-header">
+      <button id="langToggle" onclick="toggleLanguage()" style="position:absolute;top:20px;right:20px;padding:8px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);cursor:pointer;font-family:'Cinzel',serif;font-size:0.8rem;">FR</button>
+      <h1 class="game-title" data-i18n="gameTitle">The Dragon's Shadow</h1>
+      <p class="game-subtitle" data-i18n="prepareSubtitle">Chapter I - The Hunter's Path</p>
+    </header>
+
+    <div class="step-indicator" data-i18n="prepareStep">Step 1.5 of 8</div>
+
+    <div class="scene-image">
+      <img src="../images/hero-male.png" alt="Hero grabbing supplies and weapons">
+    </div>
+
+    <div class="story-text">
+      <p data-i18n="prepareStory1">Your mind races, but your hands move with purpose. You dash into your home — or what remains of it — and grab the essentials: a <span class="highlight">sturdy sword</span> from above the hearth, a <span class="highlight">worn leather pack</span>, dried meat, a waterskin, and a coil of rope.</p>
+      <p data-i18n="prepareStory2">Your neighbor, <span class="highlight">Old Marta</span>, presses a <span class="magic">healing salve</span> into your palm. "For the road," she whispers, her eyes wet. "The mountains are cruel to the unprepared."</p>
+      <p data-i18n="prepareStory3">You sling the pack over your shoulder, the sword's weight familiar at your hip. The dragon's trail is still fresh — a scorched path through the treeline leading toward the <span class="danger">Whispering Woods</span>.</p>
+      <p data-i18n="prepareStory4">You have supplies. You have a weapon. You have a chance.</p>
+      <p data-i18n="prepareStory5">The forest swallows you whole as you begin the pursuit in earnest.</p>
+    </div>
+
+    <div class="choices-container">
+      <p class="choice-label" data-i18n="choiceHowTrack">How do you track the dragon?</p>
+      <button class="choice-btn" onclick="makeChoice('prepare_track_ground', 'attack_prepare')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="prepareChoice1">Follow the scorched earth and broken branches on the ground</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('prepare_track_sky', 'attack_prepare')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="prepareChoice2">Watch the sky for the dragon's silhouette against the stars</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('prepare_track_magic', 'attack_prepare')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="prepareChoice3">Sense the lingering dark magic in the air — follow the corruption</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="../js/game.js"></script>
+  <script src="../js/translations.js"></script>
+</body>
+</html>

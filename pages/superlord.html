@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Superlord - The Dragon's Shadow</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="game-header">
+      <button id="langToggle" onclick="toggleLanguage()" style="position:absolute;top:20px;right:20px;padding:8px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);cursor:pointer;font-family:'Cinzel',serif;font-size:0.8rem;">FR</button>
+      <h1 class="game-title" data-i18n="gameTitle">The Dragon's Shadow</h1>
+      <p class="game-subtitle" data-i18n="superlordSubtitle">Chapter VII - The Dark Throne</p>
+    </header>
+
+    <div class="step-indicator" data-i18n="superlordStep">Step 7 of 8</div>
+
+    <div class="scene-image">
+      <img src="../images/superlord.png" alt="The Superlord Malachar sits upon his dark throne">
+    </div>
+
+    <div class="story-text">
+      <p data-i18n="superlordStory1">The <span class="danger">throne room</span> of Malachar is a cathedral of darkness. Pillars of black stone rise into shadow, and the air itself seems to pulse with <span class="magic">malevolent energy</span>. At the far end of the hall, upon a throne of bones and twisted metal, sits <span class="magic">Superlord Malachar</span> himself.</p>
+      <p data-i18n="superlordStory2">He is not what you expected. He is not a towering monster or a grotesque beast. He is <span class="highlight">beautiful</span> — terrifyingly so. Pale skin, silver hair, eyes like twin voids that swallow the light. He wears robes of deepest purple, and around his neck hangs the <span class="magic">Amulet of Domination</span> — the source of his control over the dragons.</p>
+      <p data-i18n="superlordStory3">"So," he says, his voice a velvet whisper that somehow fills the entire chamber. "Another <span class="danger">hero</span> crawls into my domain. How... <span class="highlight">delightful</span>."</p>
+      <p data-i18n="superlordStory4">Behind him, barely visible through the shadows, you can see a massive shape — the <span class="danger">dragon</span>, its eyes glowing with the same purple fire as the amulet. And there, in a cage of dark energy beside the throne... <span class="highlight">your spouse</span>.</p>
+      <p data-i18n="superlordStory5">This is it. The final confrontation. One way or another, this ends <span class="highlight">now</span>.</p>
+      <p data-i18n="superlordStory6">You lunge for the <span class="magic">Amulet of Domination</span> — and Malachar does not move at all. He merely raises one pale hand. Purple fire erupts from the flagstones and hangs in the air, weaving itself into a lattice of light: <span class="highlight">ten columns wide, twenty rows high</span>. A battlefield where flesh is worthless and only <span class="magic">cunning</span> matters.</p>
+      <p data-i18n="superlordStory7">"You wish to challenge my <span class="danger">will</span>," he whispers. "Then challenge it properly. Fill <span class="highlight">twenty lines</span> before I fill mine, and the amulet belongs to you. Lose... and the dragon never flies again."</p>
+    </div>
+
+    <div class="choices-container">
+      <p class="choice-label" data-i18n="choiceHowConfront">How do you confront the Superlord?</p>
+      <button class="choice-btn" onclick="makeChoice('superlord_attack', 'superlord')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="superlordChoice1">Attack Malachar directly — strike him down before he can react</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('superlord_free', 'superlord')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="superlordChoice2">Accept his challenge — beat him at his own game and shatter the Amulet</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('superlord_duel', 'superlord')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="superlordChoice3">Challenge him to a formal duel of wills — honor against honor (he will not deign to start from nothing)</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="../js/game.js"></script>
+  <script src="../js/translations.js"></script>
+</body>
+</html>

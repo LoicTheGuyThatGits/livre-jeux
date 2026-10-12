@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Main Path - The Dragon's Shadow</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="game-header">
+      <button id="langToggle" onclick="toggleLanguage()" style="position:absolute;top:20px;right:20px;padding:8px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);cursor:pointer;font-family:'Cinzel',serif;font-size:0.8rem;">FR</button>
+      <h1 class="game-title" data-i18n="gameTitle">The Dragon's Shadow</h1>
+      <p class="game-subtitle" data-i18n="mountainMainSubtitle">Chapter V - The Trapped Road</p>
+    </header>
+
+    <div class="step-indicator" data-i18n="mountainMainStep">Step 5.5 of 8</div>
+
+    <div class="scene-image">
+      <img src="../images/mountain.png" alt="Hero triggering magical trap on mountain path">
+    </div>
+
+    <div class="story-text">
+      <p data-i18n="mountainMainStory1">The main path is wide, well-trodden, <span class="danger">obviously watched</span>. You walk it anyway — speed matters. The fortress draws closer with each step.</p>
+      <p data-i18n="mountainMainStory2">Halfway up, the ground shudders. <span class="magic">Runes flare</span> beneath your feet — a <span class="danger">warding trap</span> left by the Superlord's mages. An <span class="magic">enchanted net</span> of cold iron erupts upward, tangling your legs, binding your arms, pinning you to the stone.</p>
+      <p data-i18n="mountainMainStory3">You struggle, but the net hums with anti-magic. Your blessed blade (if you have it) cannot cut it. Your strength avails nothing.</p>
+      <p data-i18n="mountainMainStory4">Hours later, a patrol finds you. <span class="danger">Undead soldiers</span> — empty eyes, mechanical movements. They don't speak. They simply drag you toward the fortress.</p>
+      <p data-i18n="mountainMainStory5">The mountain claims another hero. But perhaps... inside the fortress... an opportunity awaits.</p>
+    </div>
+
+    <div class="choices-container">
+      <p class="choice-label" data-i18n="choiceWhatNow">What do you do?</p>
+      <button class="choice-btn" onclick="makeChoice('mountainMain_escape', 'mountain_main')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="mountainMainChoice1">Feign worse injuries — wait for a guard's mistake</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('mountainMain_resist', 'mountain_main')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="mountainMainChoice2">Resist constantly — make them kill you rather than deliver you</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('mountainMain_observe', 'mountain_main')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="mountainMainChoice3">Observe everything — memorize guard patterns, fortress layout</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="../js/game.js"></script>
+  <script src="../js/translations.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shadows of the Pass - The Dragon's Shadow</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="game-header">
+      <button id="langToggle" onclick="toggleLanguage()" style="position:absolute;top:20px;right:20px;padding:8px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);cursor:pointer;font-family:'Cinzel',serif;font-size:0.8rem;">FR</button>
+      <h1 class="game-title" data-i18n="gameTitle">The Dragon's Shadow</h1>
+      <p class="game-subtitle" data-i18n="goblinSneakSubtitle">Chapter III - The Silent Path</p>
+    </header>
+
+    <div class="step-indicator" data-i18n="goblinSneakStep">Step 3.5 of 8</div>
+
+    <div class="scene-image">
+      <img src="../images/goblins.png" alt="Hero sneaking past goblin camp at night">
+    </div>
+
+    <div class="story-text">
+      <p data-i18n="goblinSneakStory1">You wait. Hours pass. The goblins feast, then drink, then brawl. One by one, they collapse into stuporous sleep around their dying fire. The sentries nod, then slump.</p>
+      <p data-i18n="goblinSneakStory2">You move like smoke. <span class="highlight">Booted feet on stone</span> — silent. <span class="highlight">Breath held</span> — invisible. You slip between sleeping forms, close enough to smell their foul breath.</p>
+      <p data-i18n="goblinSneakStory3">A goblin mutters in its sleep and rolls over — <span class="danger">directly onto your foot</span>.</p>
+      <p data-i18n="goblinSneakStory4">You don't breathe. The creature smacks its lips, smelling meat in its dreams, and rolls away. Your heart hammers. One more step. Another. You're past them. The pass opens ahead.</p>
+      <p data-i18n="goblinSneakStory5">You descend toward the village unscathed, unseen, <span class="highlight">whole</span>.</p>
+    </div>
+
+    <div class="choices-container">
+      <p class="choice-label" data-i18n="choiceWhatNow">What do you do at the village?</p>
+      <button class="choice-btn" onclick="makeChoice('goblinSneak_trade', 'goblins_sneak')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="goblinSneakChoice1">Trade honestly for supplies — you have strength to work</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('goblinSneak_steal', 'goblins_sneak')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="goblinSneakChoice2">Steal what you need — you've come too far for morals</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('goblinSneak_info', 'goblins_sneak')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="goblinSneakChoice3">Seek information first — learn the fortress's weaknesses</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="../js/game.js"></script>
+  <script src="../js/translations.js"></script>
+</body>
+</html>

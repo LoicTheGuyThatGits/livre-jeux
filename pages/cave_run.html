@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deeper into Darkness - The Dragon's Shadow</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="game-header">
+      <button id="langToggle" onclick="toggleLanguage()" style="position:absolute;top:20px;right:20px;padding:8px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);cursor:pointer;font-family:'Cinzel',serif;font-size:0.8rem;">FR</button>
+      <h1 class="game-title" data-i18n="gameTitle">The Dragon's Shadow</h1>
+      <p class="game-subtitle" data-i18n="caveRunSubtitle">Chapter II - The Lightless Deep</p>
+    </header>
+
+    <div class="step-indicator" data-i18n="caveRunStep">Step 3 of 8</div>
+
+    <div class="scene-image">
+      <img src="../images/forest-path.png" alt="Hero running through dark cave tunnels">
+    </div>
+
+    <div class="story-text">
+      <p data-i18n="caveRunStory1">You run. Deeper. Always deeper. The goblins' shrieks echo behind you, growing distant, then fading. The tunnels twist, branch, descend.</p>
+      <p data-i18n="caveRunStory2">You lose all sense of direction. Time. The darkness is absolute when your torch dies. You navigate by <span class="highlight">touch</span> — left hand on wall, right hand on sword.</p>
+      <p data-i18n="caveRunStory3">You find things in the deep. <span class="magic">Ancient bones</span> — not goblin. Older. <span class="highlight">Dwarven ruins</span>, crushed by the mountain's weight. A <span class="magic">glowing hammer</span> in a stone fist. You take it.</p>
+      <p data-i18n="caveRunStory4">Days pass. Or hours. You drink from underground streams. Eat cave lichen. The hammer glows brighter when goblins are near — a <span class="magic">warding weapon</span>.</p>
+      <p data-i18n="caveRunStory5">You emerge from a forgotten mine shaft on the fortress's <span class="highlight">northern face</span>. The mountain looms above. The hammer sings in your grip.</p>
+    </div>
+
+    <div class="choices-container">
+      <p class="choice-label" data-i18n="choiceWhereNow">Where do you go?</p>
+      <button class="choice-btn" onclick="makeChoice('caveRun_climb', 'cave_run')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="caveRunChoice1">Scale the fortress wall — the hammer makes it possible</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('caveRun_sneak', 'cave_run')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="caveRunChoice2">Find the drainage tunnel — enter from below</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('caveRun_signal', 'cave_run')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="caveRunChoice3">Light a signal fire — call the dragon to you</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="../js/game.js"></script>
+  <script src="../js/translations.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Reckless Chase - The Dragon's Shadow</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="game-header">
+      <button id="langToggle" onclick="toggleLanguage()" style="position:absolute;top:20px;right:20px;padding:8px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);cursor:pointer;font-family:'Cinzel',serif;font-size:0.8rem;">FR</button>
+      <h1 class="game-title" data-i18n="gameTitle">The Dragon's Shadow</h1>
+      <p class="game-subtitle" data-i18n="chaseSubtitle">Chapter I - The Fool's Errand</p>
+    </header>
+
+    <div class="step-indicator" data-i18n="chaseStep">Step 1.5 of 8</div>
+
+    <div class="scene-image">
+      <img src="../images/burning-village1.png" alt="Hero running through burning village after dragon">
+    </div>
+
+    <div class="story-text">
+      <p data-i18n="chaseStory1">You sprint through the burning streets, heedless of the flames licking at your heels. The dragon's massive wings beat the air above, each downstroke a thunderclap that shakes the very ground. Your spouse's cries grow fainter with every passing second.</p>
+      <p data-i18n="chaseStory2">"Wait!" you scream, your voice raw. "I'm coming!"</p>
+      <p data-i18n="chaseStory3">But the dragon does not wait. It banks toward the <span class="danger">Shadowpeak Mountains</span>, a dark silhouette against the star-strewn sky. You run until your lungs burn and your legs threaten to give out, but the distance only grows.</p>
+      <p data-i18n="chaseStory4">Hours pass. Then days. You chase a shadow across plains and through forests, surviving on berries and rainwater. The trail goes cold. The dragon was never meant to be caught on foot.</p>
+      <p data-i18n="chaseStory5">You collapse at the foot of the mountains, broken in body and spirit. The Superlord's fortress looms above, unreachable. Your spouse is gone. The darkness has won.</p>
+    </div>
+
+    <div class="choices-container">
+      <p class="choice-label" data-i18n="choiceWhatNow">What now?</p>
+      <button class="choice-btn" onclick="makeChoice('chase_accept', 'attack_chase')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="chaseChoice1">Accept your failure and fade into the shadows</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('chase_refuse', 'attack_chase')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="chaseChoice2">Refuse to give up — crawl toward the mountains one last time</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="../js/game.js"></script>
+  <script src="../js/translations.js"></script>
+</body>
+</html>

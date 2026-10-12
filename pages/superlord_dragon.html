@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Dragon's Choice - The Dragon's Shadow</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="game-header">
+      <button id="langToggle" onclick="toggleLanguage()" style="position:absolute;top:20px;right:20px;padding:8px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);cursor:pointer;font-family:'Cinzel',serif;font-size:0.8rem;">FR</button>
+      <h1 class="game-title" data-i18n="gameTitle">The Dragon's Shadow</h1>
+      <p class="game-subtitle" data-i18n="dragonChoiceSubtitle">Chapter VII - The Scaled Prisoner</p>
+    </header>
+
+    <div class="step-indicator" data-i18n="dragonChoiceStep">Step 7.5 of 8</div>
+
+    <div class="scene-image">
+      <img src="../images/superlord.png" alt="Hero facing the chained dragon">
+    </div>
+
+    <div class="story-text">
+      <p data-i18n="dragonChoiceStory1">You ignore Malachar. You ignore the amulet. You walk straight to the <span class="danger">dragon</span>.</p>
+      <p data-i18n="dragonChoiceStory2">The beast's eyes burn purple — the amulet's chains made visible. It snarls, straining against bindings that have held it for centuries. But beneath the magical fire, you see <span class="highlight">intelligence</span>. <span class="highlight">Pain</span>. <span class="highlight">A soul</span>.</p>
+      <p data-i18n="dragonChoiceStory3">"I'm not here for the Superlord," you say, voice steady. "I'm here for <span class="highlight">you</span>."</p>
+      <p data-i18n="dragonChoiceStory4">The dragon pauses. The purple fire flickers. For a heartbeat, the eyes shift — from violet to <span class="highlight">gold</span>.</p>
+      <p data-i18n="dragonChoiceStory5">Malachar's voice cuts through: "<span class="magic">Foolish</span>. The amulet controls the dragon. Break the amulet, or the dragon kills you both."</p>
+    </div>
+
+    <div class="choices-container">
+      <p class="choice-label" data-i18n="choiceHowFree">How do you free the dragon?</p>
+      <button class="choice-btn" onclick="makeChoice('dragonChoice_kill', 'superlord_free')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="dragonChoice1">Kill the dragon — mercy for the enslaved, even if it costs your spouse</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('dragonChoice_talk', 'superlord_free')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="dragonChoice2">Speak to the dragon — reach the creature beneath the magic</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('dragonChoice_amulet', 'superlord_free')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="dragonChoice3">Target the amulet directly — shatter the control at its source</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="../js/game.js"></script>
+  <script src="../js/translations.js"></script>
+</body>
+</html>

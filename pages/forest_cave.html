@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Dark Cave - The Dragon's Shadow</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="game-header">
+      <button id="langToggle" onclick="toggleLanguage()" style="position:absolute;top:20px;right:20px;padding:8px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);cursor:pointer;font-family:'Cinzel',serif;font-size:0.8rem;">FR</button>
+      <h1 class="game-title" data-i18n="gameTitle">The Dragon's Shadow</h1>
+      <p class="game-subtitle" data-i18n="caveSubtitle">Chapter II - The Maw of Earth</p>
+    </header>
+
+    <div class="step-indicator" data-i18n="caveStep">Step 2.5 of 8</div>
+
+    <div class="scene-image">
+      <img src="../images/forest-path.png" alt="Dark cave entrance in the forest">
+    </div>
+
+    <div class="story-text">
+      <p data-i18n="caveStory1">The cave mouth yawns before you like a wound in the earth. Cold, stale air rushes out, carrying the scent of <span class="danger">old blood</span> and <span class="magic">something older</span>. You light a torch and step inside.</p>
+      <p data-i18n="caveStory2">The tunnel descends steeply. Bioluminescent fungi cast eerie green light on walls scarred by ancient claws. Deeper now. The air grows thick with the smell of goblin — sweat, rot, and crude cooking fires.</p>
+      <p data-i18n="caveStory3">You hear voices ahead. Dozens of them. A <span class="danger">goblin warren</span>, not a simple camp. This cave system honeycombs the entire mountain range.</p>
+      <p data-i18n="caveStory4">A goblin sentry spots you. The alarm goes up. There is no retreat — only the dark ahead, or the swarm behind.</p>
+    </div>
+
+    <div class="choices-container">
+      <p class="choice-label" data-i18n="choiceHowSurvive">How do you survive?</p>
+      <button class="choice-btn" onclick="makeChoice('cave_fight', 'forest_cave')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="caveChoice1">Draw your sword and carve a path through the horde</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('cave_run', 'forest_cave')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="caveChoice2">Run deeper into the caves — find another exit</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('cave_hide', 'forest_cave')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="caveChoice3">Extinguish your torch and hide in the darkness</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="../js/game.js"></script>
+  <script src="../js/translations.js"></script>
+</body>
+</html>

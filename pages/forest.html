@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Dark Forest - The Dragon's Shadow</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="game-header">
+      <button id="langToggle" onclick="toggleLanguage()" style="position:absolute;top:20px;right:20px;padding:8px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);cursor:pointer;font-family:'Cinzel',serif;font-size:0.8rem;">FR</button>
+      <h1 class="game-title" data-i18n="gameTitle">The Dragon's Shadow</h1>
+      <p class="game-subtitle" data-i18n="forestSubtitle">Chapter II - The Whispering Woods</p>
+    </header>
+
+    <div class="step-indicator" data-i18n="forestStep">Step 2 of 8</div>
+
+    <div class="scene-image">
+      <img src="../images/forest-path.png" alt="Three paths diverge in a dark forest">
+    </div>
+
+    <div class="story-text">
+      <p data-i18n="forestStory1">You pursue the dragon's trail through the <span class="danger">Whispering Woods</span> — a forest so ancient that even the Superlord's shadow has yet to fully consume it. The trees loom overhead, their branches like skeletal fingers clawing at the moonlit sky.</p>
+      <p data-i18n="forestStory2">After hours of tracking, you reach a <span class="highlight">fork in the path</span>. Three routes lie before you, each more treacherous than the last. The dragon's trail is faint, but you can sense the dark magic that clings to the air — a lingering residue of the Superlord's power.</p>
+      <p data-i18n="forestStory3">To the <span class="highlight">left</span>, a dark cave mouth yawns between the trees, exhaling cold, stale air. Straight <span class="highlight">ahead</span>, a narrow mountain pass winds upward through jagged rocks. To the <span class="highlight">right</span>, the sound of rushing water echoes from a river path shrouded in mist.</p>
+      <p data-i18n="forestStory4">Your spouse's life hangs in the balance. Choose wisely.</p>
+    </div>
+
+    <div class="choices-container">
+      <p class="choice-label" data-i18n="choiceWhichPath">Which path do you take?</p>
+      <button class="choice-btn" onclick="makeChoice('forest_cave', 'forest')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="forestChoice1">Enter the dark cave — it's the shortest route</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('forest_mountain', 'forest')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="forestChoice2">Take the mountain pass — dangerous but direct</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('forest_river', 'forest')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="forestChoice3">Follow the river path — the water may hide your scent</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="../js/game.js"></script>
+  <script src="../js/translations.js"></script>
+</body>
+</html>

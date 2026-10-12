@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Attack - The Dragon's Shadow</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="game-header">
+      <button id="langToggle" onclick="toggleLanguage()" style="position:absolute;top:20px;right:20px;padding:8px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);cursor:pointer;font-family:'Cinzel',serif;font-size:0.8rem;">FR</button>
+      <h1 class="game-title" data-i18n="gameTitle">The Dragon's Shadow</h1>
+      <p class="game-subtitle" data-i18n="attackSubtitle">Chapter I - The Night of Fire</p>
+    </header>
+
+    <div class="step-indicator" data-i18n="attackStep">Step 1 of 8</div>
+
+    <div class="scene-image">
+      <img src="../images/burning-village1.png" alt="The village burns as a dragon carries your spouse away">
+    </div>
+
+    <div class="story-text">
+      <p data-i18n="attackStory1">The night air is thick with smoke and terror. Your village — your home — is engulfed in <span class="danger">flames</span>. The screams of your neighbors echo through the darkness, mingling with the terrible roar of the beast that has descended upon you.</p>
+      <p data-i18n="attackStory2">And then you see it. A <span class="magic">dragon</span>, its scales gleaming like molten obsidian in the firelight, its eyes burning with an unnatural <span class="magic">purple glow</span>. In its massive claws, struggling and crying out your name, is <span class="highlight">your spouse</span>.</p>
+      <p data-i18n="attackStory3">The dragon beats its wings and rises into the night sky, carrying everything you love toward the <span class="danger">Shadowpeak Mountains</span> — toward the fortress of <span class="magic">Superlord Malachar</span>.</p>
+      <p data-i18n="attackStory4">Your heart pounds. Your hands tremble. The dragon is already disappearing into the distance. You must act — <span class="highlight">now</span>.</p>
+    </div>
+
+    <div class="choices-container">
+      <p class="choice-label" data-i18n="choiceWhatDo">What do you do?</p>
+      <button class="choice-btn" onclick="makeChoice('attack_chase', 'attack')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="attackChoice1">Chase after the dragon immediately, without any preparation</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('attack_prepare', 'attack')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="attackChoice2">Quickly grab supplies and weapons, then pursue</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('attack_help', 'attack')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="attackChoice3">Seek out the village elder for guidance and help</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="../js/game.js"></script>
+  <script src="../js/translations.js"></script>
+</body>
+</html>

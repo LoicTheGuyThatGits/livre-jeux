@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Mountain Pass - The Dragon's Shadow</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="game-header">
+      <button id="langToggle" onclick="toggleLanguage()" style="position:absolute;top:20px;right:20px;padding:8px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);cursor:pointer;font-family:'Cinzel',serif;font-size:0.8rem;">FR</button>
+      <h1 class="game-title" data-i18n="gameTitle">The Dragon's Shadow</h1>
+      <p class="game-subtitle" data-i18n="mountainPassSubtitle">Chapter II - The High Road</p>
+    </header>
+
+    <div class="step-indicator" data-i18n="mountainPassStep">Step 2.5 of 8</div>
+
+    <div class="scene-image">
+      <img src="../images/mountain.png" alt="Narrow mountain pass winding through jagged peaks">
+    </div>
+
+    <div class="story-text">
+      <p data-i18n="mountainPassStory1">The mountain pass winds upward through jagged rocks, the path narrow enough that two people cannot walk abreast. To your left, the mountain wall rises sheer. To your right, a <span class="danger">deadly drop</span> into mist-shrouded valleys.</p>
+      <p data-i18n="mountainPassStory2">The air grows thin. Your breath comes in ragged gasps. The dragon's trail is clear here — scorch marks on the rocks, the distinctive sulfurous scent of its passage.</p>
+      <p data-i18n="mountainPassStory3">Ahead, the pass widens into a natural amphitheater. Smoke rises from a <span class="danger">goblin camp</span> nestled in the bowl-shaped depression. They block the only way forward.</p>
+      <p data-i18n="mountainPassStory4">You crouch behind a boulder, watching. There are more than you hoped — at least twenty. But you also see something else: a <span class="highlight">side trail</span> skirting the camp, half-hidden by loose shale.</p>
+    </div>
+
+    <div class="choices-container">
+      <p class="choice-label" data-i18n="choiceHowProceed">How do you proceed?</p>
+      <button class="choice-btn" onclick="makeChoice('mountainPass_fight', 'forest_mountain')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="mountainPassChoice1">Attack the goblin camp head-on</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('mountainPass_sneak', 'forest_mountain')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="mountainPassChoice2">Use the hidden side trail to bypass the camp</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('mountainPass_ambush', 'forest_mountain')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="mountainPassChoice3">Set a rockslide trap to bury or scatter the goblins</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="../js/game.js"></script>
+  <script src="../js/translations.js"></script>
+</body>
+</html>

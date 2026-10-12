@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Village - The Dragon's Shadow</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="game-header">
+      <button id="langToggle" onclick="toggleLanguage()" style="position:absolute;top:20px;right:20px;padding:8px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);cursor:pointer;font-family:'Cinzel',serif;font-size:0.8rem;">FR</button>
+      <h1 class="game-title" data-i18n="gameTitle">The Dragon's Shadow</h1>
+      <p class="game-subtitle" data-i18n="villageSubtitle">Chapter IV - Haven of the Damned</p>
+    </header>
+
+    <div class="step-indicator" data-i18n="villageStep">Step 4 of 8</div>
+
+    <div class="scene-image">
+      <img src="../images/village.png" alt="A village at dusk, its windows glowing with warm light">
+    </div>
+
+    <div class="story-text">
+      <p data-i18n="villageStory1">Beyond the mountains, you descend into a valley where a small <span class="highlight">village</span> clings to life in the shadow of the Superlord's tyranny. The people here are survivors — hardened by decades of oppression, yet still clinging to fragments of hope.</p>
+      <p data-i18n="villageStory2">You need <span class="highlight">supplies</span> for the final leg of your journey. The Superlord's fortress lies just beyond the next ridge, and you cannot face him on an empty stomach or without proper equipment. But the villagers are wary of strangers, and the Superlord's spies are everywhere.</p>
+      <p data-i18n="villageStory3">The village market bustles with quiet desperation. Merchants sell their wares under the watchful eyes of <span class="danger">Superlord's guards</span> — armored enforcers who patrol the streets, ensuring loyalty through fear.</p>
+      <p data-i18n="villageStory4">You must find a way to <span class="highlight">equip yourself</span> — but how far are you willing to go?</p>
+    </div>
+
+    <div class="choices-container">
+      <p class="choice-label" data-i18n="choiceHowGet">How do you get supplies?</p>
+      <button class="choice-btn" onclick="makeChoice('village_steal', 'village')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="villageChoice1">Steal what you need from the market while no one is looking</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('village_trade', 'village')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="villageChoice2">Trade honestly — offer your labor or skills in exchange for supplies</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('village_sneak', 'village')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="villageChoice3">Sneak into the village storehouse at night and take what you need</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="../js/game.js"></script>
+  <script src="../js/translations.js"></script>
+</body>
+</html>

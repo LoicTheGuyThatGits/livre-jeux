@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>War in the Dark - The Dragon's Shadow</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="game-header">
+      <button id="langToggle" onclick="toggleLanguage()" style="position:absolute;top:20px;right:20px;padding:8px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);cursor:pointer;font-family:'Cinzel',serif;font-size:0.8rem;">FR</button>
+      <h1 class="game-title" data-i18n="gameTitle">The Dragon's Shadow</h1>
+      <p class="game-subtitle" data-i18n="caveFightSubtitle">Chapter II - The Goblin Warren</p>
+    </header>
+
+    <div class="step-indicator" data-i18n="caveFightStep">Step 3 of 8</div>
+
+    <div class="scene-image">
+      <img src="../images/goblins.png" alt="Hero fighting goblins in dark cave">
+    </div>
+
+    <div class="story-text">
+      <p data-i18n="caveFightStory1">You draw your sword in the tight confines of the cave. The goblins swarm — dozens of them, screeching, clawing, biting. No room for finesse. Only <span class="highlight">butchery</span>.</p>
+      <p data-i18n="caveFightStory2">You become a engine of death. Thrust. Parry. Slash. The cave walls run with green blood. The goblin shaman tries its purple magic, but you close the distance and silence it forever.</p>
+      <p data-i18n="caveFightStory3">Hours. It takes hours. The pile of bodies chokes the passage. You are <span class="danger">exhausted</span>, <span class="danger">wounded</span>, your blade notched and dull.</p>
+      <p data-i18n="caveFightStory4">Finally, silence. The surviving goblins flee deeper into the earth. You find an exit — a fissure opening onto the mountain face. The village lies below.</p>
+      <p data-i18n="caveFightStory5">You descend, barely alive. But you have <span class="highlight">goblin intel</span> — maps, patrol routes, the location of a <span class="magic">secret fortress entrance</span>.</p>
+    </div>
+
+    <div class="choices-container">
+      <p class="choice-label" data-i18n="choiceWhatNow">What do you do at the village?</p>
+      <button class="choice-btn" onclick="makeChoice('caveFight_trade', 'cave_fight')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="caveFightChoice1">Trade your goblin intel for supplies and healing</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('caveFight_rest', 'cave_fight')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="caveFightChoice2">Rest and recover — the mountain isn't going anywhere</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('caveFight_rush', 'cave_fight')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="caveFightChoice3">Rush straight to the secret entrance — no time to lose</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="../js/game.js"></script>
+  <script src="../js/translations.js"></script>
+</body>
+</html>

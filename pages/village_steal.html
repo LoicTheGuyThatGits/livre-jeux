@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thief in the Night - The Dragon's Shadow</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="game-header">
+      <button id="langToggle" onclick="toggleLanguage()" style="position:absolute;top:20px;right:20px;padding:8px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);cursor:pointer;font-family:'Cinzel',serif;font-size:0.8rem;">FR</button>
+      <h1 class="game-title" data-i18n="gameTitle">The Dragon's Shadow</h1>
+      <p class="game-subtitle" data-i18n="villageStealSubtitle">Chapter IV - The Cutpurse's End</p>
+    </header>
+
+    <div class="step-indicator" data-i18n="villageStealStep">Step 4.5 of 8</div>
+
+    <div class="scene-image">
+      <img src="../images/village.png" alt="Hero stealing from market stall at night">
+    </div>
+
+    <div class="story-text">
+      <p data-i18n="villageStealStory1">Night falls on the village. You move through shadows, a ghost in the making. The market stalls sit unattended, goods covered by canvas. Easy pickings.</p>
+      <p data-i18n="villageStealStory2">You take dried meat, a fresh waterskin, rope, a whetstone. <span class="highlight">Supplies for the journey</span>. Your fingers brush a <span class="magic">glowing amulet</span> on a jeweler's tray — you pocket that too.</p>
+      <p data-i18n="villageStealStory3">A whistle cuts the air. <span class="danger">Superlord's guards</span> — they were waiting. A trap. The "unattended" market was bait.</p>
+      <p data-i18n="villageStealStory4">Crossbow bolts thud into the wood around you. You run, but the village gates are shut. The guards close in, armor gleaming in torchlight.</p>
+      <p data-i18n="villageStealStory5">A cell awaits. The trail goes cold. Your spouse waits in vain.</p>
+    </div>
+
+    <div class="choices-container">
+      <p class="choice-label" data-i18n="choiceFinalAct">Your final act in the cell?</p>
+      <button class="choice-btn" onclick="makeChoice('villageSteal_escape', 'village_steal')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="villageStealChoice1">Use the stolen amulet — it might have magic</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('villageSteal_wait', 'village_steal')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="villageStealChoice2">Wait for transfer to the fortress — escape from inside</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('villageSteal_message', 'village_steal')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="villageStealChoice3">Bribe a guard to carry a message to your spouse</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="../js/game.js"></script>
+  <script src="../js/translations.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hide in Shadows - The Dragon's Shadow</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="game-header">
+      <button id="langToggle" onclick="toggleLanguage()" style="position:absolute;top:20px;right:20px;padding:8px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);cursor:pointer;font-family:'Cinzel',serif;font-size:0.8rem;">FR</button>
+      <h1 class="game-title" data-i18n="gameTitle">The Dragon's Shadow</h1>
+      <p class="game-subtitle" data-i18n="caveHideSubtitle">Chapter II - The Patient Stone</p>
+    </header>
+
+    <div class="step-indicator" data-i18n="caveHideStep">Step 3 of 8</div>
+
+    <div class="scene-image">
+      <img src="../images/forest-path.png" alt="Hero hiding in dark cave niche">
+    </div>
+
+    <div class="story-text">
+      <p data-i18n="caveHideStory1">You extinguish your torch. Press yourself into a niche. Control your breathing. Slow your heart. Become <span class="highlight">stone</span>.</p>
+      <p data-i18n="caveHideStory2">The goblin horde rushes past — a tide of green skin and crude steel, hunting the intruder who triggered their alarm. They scream past your hiding spot, missing you by inches.</p>
+      <p data-i18n="caveHideStory3">Hours pass. The cave grows quiet. You wait longer. Then slip out, moving opposite their search pattern.</p>
+      <p data-i18n="caveHideStory4">You discover a <span class="highlight">forgotten shrine</span> deep in the caves — pre-Superlord, dedicated to the <span class="magic">Dragon Lords of old</span>. An altar holds a <span class="magic">scale</span> — not from Malachar's dragons, but from the <span class="highlight">First Dragons</span>. It hums with anti-magic.</p>
+      <p data-i18n="caveHideStory5">You take the scale. It will protect you from the amulet's power. You find an exit onto the mountain path — the <span class="highlight">hidden trail</span> the goblins use.</p>
+    </div>
+
+    <div class="choices-container">
+      <p class="choice-label" data-i18n="choiceWhereNow">Where does the hidden trail lead?</p>
+      <button class="choice-btn" onclick="makeChoice('caveHide_village', 'cave_hide')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="caveHideChoice1">Down to the village — rest and resupply</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('caveHide_fortress', 'cave_hide')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="caveHideChoice2">Up to the fortress — the scale guides you to a secret entrance</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('caveHide_dragon', 'cave_hide')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="caveHideChoice3">Follow the scale's pull — it points toward the dragon itself</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="../js/game.js"></script>
+  <script src="../js/translations.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Rope Bridge - The Dragon's Shadow</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="game-header">
+      <button id="langToggle" onclick="toggleLanguage()" style="position:absolute;top:20px;right:20px;padding:8px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);cursor:pointer;font-family:'Cinzel',serif;font-size:0.8rem;">FR</button>
+      <h1 class="game-title" data-i18n="gameTitle">The Dragon's Shadow</h1>
+      <p class="game-subtitle" data-i18n="mountainBridgeSubtitle">Chapter V - The Swaying Thread</p>
+    </header>
+
+    <div class="step-indicator" data-i18n="mountainBridgeStep">Step 5.5 of 8</div>
+
+    <div class="scene-image">
+      <img src="../images/mountain.png" alt="Hero crossing rope bridge over chasm">
+    </div>
+
+    <div class="story-text">
+      <p data-i18n="mountainBridgeStory1">The rope bridge spans a <span class="danger">chasm deep enough to swallow the world</span>. Frayed hemp cables. Rotting wooden slats. It sways violently in the wind, a living thing trying to shake you off.</p>
+      <p data-i18n="mountainBridgeStory2">You step onto it. The bridge groans. <span class="highlight">Slat cracks</span> — your boot punches through. You catch the cable, heart in throat, and haul yourself up.</p>
+      <p data-i18n="mountainBridgeStory3">Halfway. The wind <span class="danger">redoubles</span>. A cable <span class="magic">snaps</span>. The bridge tilts, dumping you toward the void.</p>
+      <p data-i18n="mountainBridgeStory4">You catch the remaining cable with one hand. Your pack slips, falls, disappears into the dark. Supplies gone. Rope gone. The blessed blade (if you had it) gone.</p>
+      <p data-i18n="mountainBridgeStory5">You climb hand-over-hand, muscles screaming. You reach the far side, haul yourself up, and lie gasping on cold stone. Alive. Barely equipped. But the fortress gates are <span class="highlight">right there</span>.</p>
+    </div>
+
+    <div class="choices-container">
+      <p class="choice-label" data-i18n="choiceWhatNow">What now?</p>
+      <button class="choice-btn" onclick="makeChoice('mountainBridge_front', 'mountain_bridge')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="mountainBridgeChoice1">Stagger to the main gate — demand entry as a 'prisoner'</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('mountainBridge_search', 'mountain_bridge')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="mountainBridgeChoice2">Search the cliff base for a drain or crack — another way in</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('mountainBridge_climb', 'mountain_bridge')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="mountainBridgeChoice3">Scale the fortress wall directly — you have nothing left to lose</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="../js/game.js"></script>
+  <script src="../js/translations.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Honest Work - The Dragon's Shadow</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="game-header">
+      <button id="langToggle" onclick="toggleLanguage()" style="position:absolute;top:20px;right:20px;padding:8px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;color:var(--text);cursor:pointer;font-family:'Cinzel',serif;font-size:0.8rem;">FR</button>
+      <h1 class="game-title" data-i18n="gameTitle">The Dragon's Shadow</h1>
+      <p class="game-subtitle" data-i18n="villageTradeSubtitle">Chapter IV - The Merchant's Bargain</p>
+    </header>
+
+    <div class="step-indicator" data-i18n="villageTradeStep">Step 4.5 of 8</div>
+
+    <div class="scene-image">
+      <img src="../images/village.png" alt="Hero working at a forge in the village">
+    </div>
+
+    <div class="story-text">
+      <p data-i18n="villageTradeStory1">You approach the <span class="highlight">village smith</span> — a broad-shouldered woman named <span class="highlight">Brenna</span> with soot-streaked arms and kind eyes. "Work for supplies," you offer. "My arm is strong."</p>
+      <p data-i18n="villageTradeStory2">She studies you, then nods. "Three days. Repair the militia's armor, shoe the horses, fix the well pump. Do it well, and you'll leave with a full pack and a <span class="highlight">blessed blade</span>."</p>
+      <p data-i18n="villageTradeStory3">Three days of sweat and hammer-ring. The villagers watch, wary at first, then with grudging respect. Children bring you water. An old man presses a <span class="magic">warding charm</span> into your hand — "Against the mountain's evil."</p>
+      <p data-i18n="villageTradeStory4">On the third evening, Brenna hands you a sword that hums faintly. "Cold iron, blessed by the old rites. It <span class="danger">hurts</span> the undead." She also gives you a <span class="highlight">hearty pack</span> — food, bandages, climbing gear.</p>
+      <p data-i18n="villageTradeStory5">"The hidden trail up the mountain," she whispers. "My grandfather marked it. Few know. Take it."</p>
+    </div>
+
+    <div class="choices-container">
+      <p class="choice-label" data-i18n="choiceWhichPath">Which path up the mountain?</p>
+      <button class="choice-btn" onclick="makeChoice('villageTrade_main', 'village_trade')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="villageTradeChoice1">Take the main path — your new sword can handle guards</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('villageTrade_hidden', 'village_trade')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="villageTradeChoice2">Follow Brenna's hidden trail — secrecy is survival</span>
+      </button>
+      <button class="choice-btn" onclick="makeChoice('villageTrade_bridge', 'village_trade')">
+        <span class="choice-icon">&#9876;</span>
+        <span class="choice-text" data-i18n="villageTradeChoice3">Cross the rope bridge — the blessed blade protects from falls</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="../js/game.js"></script>
+  <script src="../js/translations.js"></script>
+</body>
+</html>
